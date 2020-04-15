@@ -36,16 +36,13 @@ namespace CourseProjectDB
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
 
+            //dataGridView1.DataSource = dataTable;
+
             UserForm userForm = new UserForm(this);
+            userForm.Show();
+            this.Hide();
+
             
-            if(textBox1.Text == "alex" && textBox2.Text == "alex")
-            {
-                userForm.Show();
-                this.Hide();
-            } else
-            {
-                MessageBox.Show("Неправильный логин или пароль");
-            }
 
         }
 
