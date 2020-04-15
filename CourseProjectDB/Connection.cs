@@ -12,13 +12,11 @@ namespace CourseProjectDB
 
         public Connection() {}
 
-        public DataTable getConnection()
+        public SqlDataAdapter getConnection(String query)
         {
             SqlConnection connection = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=True;User ID=root;Password=root;");
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("Select * from car", connection);
-            DataTable dataTable = new DataTable();
-            sqlDataAdapter.Fill(dataTable);
-            return dataTable;
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, connection);
+            return sqlDataAdapter;
         }
     }
 }
