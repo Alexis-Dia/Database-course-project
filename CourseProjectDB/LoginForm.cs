@@ -32,18 +32,28 @@ namespace CourseProjectDB
         {
 
             Connection connection = new Connection();
-            SqlDataAdapter sqlDataAdapter = connection.getConnection("Select * from car");
+            String login = textBox1.Text;
+            String query = "select * from [carriages_system].[dbo].[user] where login = @login";
+            SqlDataAdapter sqlDataAdapter = connection.getConnectionWithCommand(query, login);
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
 
-            //dataGridView1.DataSource = dataTable;
+            int i = dataTable.Select().Length;
 
-            UserForm userForm = new UserForm(this);
-
-            if (textBox1.Text == "alex" && textBox2.Text == "alex")
+            if (i == 1)
             {
+            DataRow row = dataTable.Rows[0];
+            String s = row["login"].ToString();
+            if (textBox1.Text == s && textBox2.Text == "alex")
+            {
+                UserForm userForm = new UserForm(this);
                 userForm.Show();
                 this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Неправильный логин или пароль");
+            }
             }
             else
             {

@@ -18,5 +18,15 @@ namespace CourseProjectDB
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, connection);
             return sqlDataAdapter;
         }
+
+        public SqlDataAdapter getConnectionWithCommand(String query, String param)
+        {
+            SqlConnection connection = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=True;User ID=root;Password=root;");
+            connection.Open();
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@login", param);
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
+            return sqlDataAdapter;
+        }
     }
 }
