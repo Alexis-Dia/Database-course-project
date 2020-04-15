@@ -43,8 +43,9 @@ namespace CourseProjectDB
             if (i == 1)
             {
             DataRow row = dataTable.Rows[0];
-            String s = row["login"].ToString();
-            if (textBox1.Text == s && textBox2.Text == "alex")
+            String email = row["login"].ToString();
+            String password = row["password"].ToString();
+            if (textBox1.Text == email && textBox2.Text == password)
             {
                 UserForm userForm = new UserForm(this);
                 userForm.Show();
