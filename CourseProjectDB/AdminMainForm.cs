@@ -13,11 +13,13 @@ namespace CourseProjectDB
     public partial class AdminMainForm : Form
     {
         Main main = null;
+        DataTable dataTable = null;
 
-        public AdminMainForm(Main main)
+        public AdminMainForm(Main main, DataTable dataTable)
         {
             InitializeComponent();
             this.main = main;
+            this.dataTable = dataTable;
         }
 
         private void выйтиToolStripMenuItem_Click(object sender, EventArgs e)

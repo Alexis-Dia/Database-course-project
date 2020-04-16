@@ -15,11 +15,25 @@ namespace CourseProjectDB
     {
 
         Main main = null;
+        DataTable dataTable = null;
 
-        public UserMainForm(Main main)
+        public UserMainForm(Main main, DataTable dataTable)
         {
             InitializeComponent();
             this.main = main;
+            this.dataTable = dataTable;
+
+            DataRow row = dataTable.Rows[0];
+            textBox11.Text = row["first_name"].ToString();
+            textBox12.Text = row["last_name"].ToString();
+            textBox13.Text = row["patronymic"].ToString();
+            textBox14.Text = row["birthday"].ToString();
+            textBox15.Text = row["login"].ToString();
+            textBox16.Text = row["money"].ToString();
+            textBox17.Text = row["status_id"].ToString();
+
+            panel1.BringToFront();
+            panel2.SendToBack();
         }
 
         private void UserForm_Load(object sender, EventArgs e)
@@ -40,7 +54,8 @@ namespace CourseProjectDB
 
         private void свободныеЗадачиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            panel1.SendToBack();
+            panel2.BringToFront();
         }
 
         private void мояИнформацияToolStripMenuItem_Click(object sender, EventArgs e)
@@ -50,7 +65,32 @@ namespace CourseProjectDB
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
 
-            dataGridView1.DataSource = dataTable;
+            panel1.BringToFront();
+            panel2.SendToBack();
+            //dataGridView1.DataSource = dataTable;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void текущаяЗадачаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.SendToBack();
+            panel2.BringToFront();
+        }
+
+        private void всеОтчетыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.SendToBack();
+            panel2.BringToFront();
+        }
+
+        private void добавитьОтчетToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.SendToBack();
+            panel2.BringToFront();
         }
     }
 }

@@ -52,13 +52,13 @@ namespace CourseProjectDB
                 int role_id = Int32.Parse(row["role_id"].ToString());
                 if (role_id == USER_ROLE_ID)
                     {
-                        UserMainForm userForm = new UserMainForm(this);
+                        UserMainForm userForm = new UserMainForm(this, dataTable);
                         userForm.Show();
                         this.Hide();
                     }
                 else
                     {
-                        AdminMainForm userForm = new AdminMainForm(this);
+                        AdminMainForm userForm = new AdminMainForm(this, dataTable);
                         userForm.Show();
                         this.Hide();
                     }
@@ -86,6 +86,11 @@ namespace CourseProjectDB
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
