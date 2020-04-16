@@ -27,10 +27,10 @@ namespace CourseProjectDB.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Persist Securi" +
-            "ty Info=True;User ID=root")]
-        public string cn {
+            "ty Info=True;User ID=root;Password=root")]
+        public string carriages_systemConnectionString {
             get {
-                return ((string)(this["cn"]));
+                return ((string)(this["carriages_systemConnectionString"]));
             }
         }
     }

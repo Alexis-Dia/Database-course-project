@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="carriages_systemDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>carriages_systemDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Connection.cs" />
     <Compile Include="AdminMainForm.cs">
       <SubType>Form</SubType>
@@ -90,16 +95,16 @@
     <EmbeddedResource Include="UserMainForm.resx">
       <DependentUpon>UserMainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DataSet.xsc">
-      <DependentUpon>DataSet.xsd</DependentUpon>
+    <None Include="carriages_systemDataSet1.xsc">
+      <DependentUpon>carriages_systemDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="DataSet.xsd">
+    <None Include="carriages_systemDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>carriages_systemDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DataSet.xss">
-      <DependentUpon>DataSet.xsd</DependentUpon>
+    <None Include="carriages_systemDataSet1.xss">
+      <DependentUpon>carriages_systemDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

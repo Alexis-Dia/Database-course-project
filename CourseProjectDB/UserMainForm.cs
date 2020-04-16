@@ -38,7 +38,9 @@ namespace CourseProjectDB
 
         private void UserForm_Load(object sender, EventArgs e)
         {
-            
+            // TODO: This line of code loads data into the 'carriages_systemDataSet.rrr' table. You can move, or remove it, as needed.
+            this.rrrTableAdapter.Fill(this.carriages_systemDataSet.rrr);
+
         }
 
         private void выйтиToolStripMenuItem_Click(object sender, EventArgs e)
@@ -91,6 +93,14 @@ namespace CourseProjectDB
         {
             panel1.SendToBack();
             panel2.BringToFront();
+        }
+
+        private void rrrBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.rrrBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+
         }
     }
 }
