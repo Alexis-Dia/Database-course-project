@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace CourseProjectDB
 {
-    public partial class UserForm : Form
+    public partial class UserMainForm : Form
     {
 
         Main main = null;
 
-        public UserForm(Main main)
+        public UserMainForm(Main main)
         {
             InitializeComponent();
             this.main = main;

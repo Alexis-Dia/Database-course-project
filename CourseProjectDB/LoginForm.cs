@@ -13,6 +13,8 @@ namespace CourseProjectDB
 {
     public partial class Main : Form
     {
+        const int ADMIN_ROLE_ID = 1;
+        const int USER_ROLE_ID = 2;
         public Main()
         {
             InitializeComponent();
@@ -47,9 +49,19 @@ namespace CourseProjectDB
             String password = row["password"].ToString();
             if (textBox1.Text == email && textBox2.Text == password)
             {
-                UserForm userForm = new UserForm(this);
-                userForm.Show();
-                this.Hide();
+                int role_id = Int32.Parse(row["role_id"].ToString());
+                if (role_id == USER_ROLE_ID)
+                    {
+                        UserMainForm userForm = new UserMainForm(this);
+                        userForm.Show();
+                        this.Hide();
+                    }
+                else
+                    {
+                        AdminMainForm userForm = new AdminMainForm(this);
+                        userForm.Show();
+                        this.Hide();
+                    }
             }
             else
             {

@@ -1,6 +1,6 @@
 ﻿namespace CourseProjectDB
 {
-    partial class UserForm
+    partial class UserMainForm
     {
         /// <summary>
         /// Required designer variable.
