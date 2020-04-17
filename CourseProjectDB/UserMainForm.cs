@@ -34,11 +34,22 @@ namespace CourseProjectDB
 
             panel1.BringToFront();
             panel2.SendToBack();
+            panel3.SendToBack();
         }
 
         private void UserForm_Load(object sender, EventArgs e)
         {
-            
+            // TODO: This line of code loads data into the 'carriages_systemDataSet.task' table. You can move, or remove it, as needed.
+            this.taskTableAdapter.Fill(this.carriages_systemDataSet.task);
+            // TODO: This line of code loads data into the 'carriages_systemDataSet.report' table. You can move, or remove it, as needed.
+            //this.reportTableAdapter.Fill(this.carriages_systemDataSet.report);
+            // TODO: This line of code loads data into the 'carriages_systemDataSet.report' table. You can move, or remove it, as needed.
+            this.reportTableAdapter.Fill(this.carriages_systemDataSet.report);
+
+            taskDataGridView.Columns[0].Width = 40;
+            taskDataGridView.Columns[2].Width = 50;
+            taskDataGridView.Columns[6].Width = 50;
+
         }
 
         private void выйтиToolStripMenuItem_Click(object sender, EventArgs e)
@@ -56,6 +67,7 @@ namespace CourseProjectDB
         {
             panel1.SendToBack();
             panel2.BringToFront();
+            panel3.SendToBack();
         }
 
         private void мояИнформацияToolStripMenuItem_Click(object sender, EventArgs e)
@@ -67,6 +79,7 @@ namespace CourseProjectDB
 
             panel1.BringToFront();
             panel2.SendToBack();
+            panel3.SendToBack();
             //dataGridView1.DataSource = dataTable;
         }
 
@@ -79,18 +92,76 @@ namespace CourseProjectDB
         {
             panel1.SendToBack();
             panel2.BringToFront();
+            panel3.SendToBack();
         }
 
         private void всеОтчетыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panel1.SendToBack();
-            panel2.BringToFront();
+            panel2.SendToBack();
+            panel3.BringToFront();
         }
 
         private void добавитьОтчетToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panel1.SendToBack();
-            panel2.BringToFront();
+            panel2.SendToBack();
+            panel3.BringToFront();
+        }
+
+        private void reportBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.reportBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+
+        }
+
+        private void reportBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.reportBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.reportBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+        }
+
+        private void taskDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bindingNavigator2_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton2_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.taskBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
         }
     }
 }
