@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="carriages_systemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>carriages_systemDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Connection.cs" />
     <Compile Include="AdminMainForm.cs">
       <SubType>Form</SubType>
@@ -85,6 +90,17 @@
     <EmbeddedResource Include="UserMainForm.resx">
       <DependentUpon>UserMainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="carriages_systemDataSet.xsc">
+      <DependentUpon>carriages_systemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="carriages_systemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>carriages_systemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="carriages_systemDataSet.xss">
+      <DependentUpon>carriages_systemDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
