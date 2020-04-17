@@ -38,6 +38,8 @@ namespace CourseProjectDB
 
         private void AdminMainForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'carriages_systemDataSet.brand' table. You can move, or remove it, as needed.
+            this.brandTableAdapter.Fill(this.carriages_systemDataSet.brand);
             // TODO: This line of code loads data into the 'carriages_systemDataSet.report' table. You can move, or remove it, as needed.
             this.reportTableAdapter.Fill(this.carriages_systemDataSet.report);
             // TODO: This line of code loads data into the 'carriages_systemDataSet.task' table. You can move, or remove it, as needed.
@@ -51,6 +53,7 @@ namespace CourseProjectDB
             panel2.BringToFront();
             panel3.SendToBack();
             panel4.SendToBack();
+            panel5.SendToBack();
 
             userDataGridView.Columns[0].Width = 50;
 
@@ -62,6 +65,7 @@ namespace CourseProjectDB
             panel2.BringToFront();
             panel3.SendToBack();
             panel4.SendToBack();
+            panel5.SendToBack();
         }
 
         private void отчетыToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,6 +74,7 @@ namespace CourseProjectDB
             panel2.SendToBack();
             panel3.BringToFront();
             panel4.SendToBack();
+            panel5.SendToBack();
         }
 
         private void отчеты1ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -78,6 +83,7 @@ namespace CourseProjectDB
             panel2.SendToBack();
             panel3.SendToBack();
             panel4.BringToFront();
+            panel5.SendToBack();
         }
 
         private void машиныToolStripMenuItem_Click(object sender, EventArgs e)
@@ -86,6 +92,16 @@ namespace CourseProjectDB
             panel2.SendToBack();
             panel3.SendToBack();
             panel4.SendToBack();
+            panel5.SendToBack();
+        }
+
+        private void брэндыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.SendToBack();
+            panel2.SendToBack();
+            panel3.SendToBack();
+            panel4.SendToBack();
+            panel5.BringToFront();
         }
 
         private void toolStripButton7_Click_1(object sender, EventArgs e)
@@ -108,5 +124,13 @@ namespace CourseProjectDB
             this.reportBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
         }
+
+        private void toolStripButton28_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.brandBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+        }
+
     }
 }
