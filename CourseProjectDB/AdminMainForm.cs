@@ -28,13 +28,6 @@ namespace CourseProjectDB
             this.Hide();
         }
 
-        private void brandBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.brandBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
-        }
-
         private void AdminMainForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'carriages_systemDataSet.FullUserView' table. You can move, or remove it, as needed.
@@ -76,74 +69,159 @@ namespace CourseProjectDB
 
         }
 
+        private void brandBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Validate();
+                this.brandBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.carBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+            try
+            {
+                this.Validate();
+                this.carBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+            }
+            catch (System.Data.SqlClient.SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void toolStripButton14_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.carstatusBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+            try
+            {
+                this.Validate();
+                this.carstatusBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+            }
+            catch (System.Data.SqlClient.SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void toolStripButton21_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.reportBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+            try
+            {
+                this.Validate();
+                this.reportBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+            }
+            catch (System.Data.SqlClient.SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void toolStripButton28_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.roleBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+            try
+            {
+                this.Validate();
+                this.roleBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+            }
+            catch (System.Data.SqlClient.SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void toolStripButton35_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.taskBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+            try
+            {
+                this.Validate();
+                this.taskBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+            }
+            catch (System.Data.SqlClient.SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void toolStripButton42_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.taskreportBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+            try
+            {
+                this.Validate();
+                this.taskreportBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+            }
+            catch (System.Data.SqlClient.SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void toolStripButton49_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.taskstatusBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+            try
+            {
+                this.Validate();
+                this.taskstatusBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+            }
+            catch (System.Data.SqlClient.SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void toolStripButton56_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.userBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+            try
+            {
+                this.Validate();
+                this.userBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+            }
+            catch (System.Data.SqlClient.SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void toolStripButton63_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.userstatusBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+            try
+            {
+                this.Validate();
+                this.userstatusBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+            }
+            catch (System.Data.SqlClient.SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void toolStripButton70_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.fullUserViewBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+            try
+            {
+                this.Validate();
+                this.fullUserViewBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+            }
+            catch (System.Data.SqlClient.SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void брэндыToolStripMenuItem_Click(object sender, EventArgs e)
