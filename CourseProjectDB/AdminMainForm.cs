@@ -62,6 +62,18 @@ namespace CourseProjectDB
             // TODO: This line of code loads data into the 'carriages_systemDataSet.brand' table. You can move, or remove it, as needed.
             this.brandTableAdapter.Fill(this.carriages_systemDataSet.brand);
 
+            panel1.BringToFront();
+            panel2.SendToBack();
+            panel3.SendToBack();
+            panel4.SendToBack();
+            panel5.SendToBack();
+            panel6.SendToBack();
+            panel7.SendToBack();
+            panel8.SendToBack();
+            panel9.SendToBack();
+            panel10.SendToBack();
+            panel11.SendToBack();
+
         }
 
         private void toolStripButton7_Click(object sender, EventArgs e)
@@ -132,6 +144,156 @@ namespace CourseProjectDB
             this.Validate();
             this.fullUserViewBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+        }
+
+        private void брэндыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.BringToFront();
+            panel2.SendToBack();
+            panel3.SendToBack();
+            panel4.SendToBack();
+            panel5.SendToBack();
+            panel6.SendToBack();
+            panel7.SendToBack();
+            panel8.SendToBack();
+            panel9.SendToBack();
+            panel10.SendToBack();
+            panel11.SendToBack();
+        }
+
+        private void машиныToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.SendToBack();
+            panel2.BringToFront();
+            panel3.SendToBack();
+            panel4.SendToBack();
+            panel5.SendToBack();
+            panel6.SendToBack();
+            panel7.SendToBack();
+            panel8.SendToBack();
+            panel9.SendToBack();
+            panel10.SendToBack();
+            panel11.SendToBack();
+        }
+
+        private void статусыМашинToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.SendToBack();
+            panel2.SendToBack();
+            panel3.BringToFront();
+            panel4.SendToBack();
+            panel5.SendToBack();
+            panel6.SendToBack();
+            panel7.SendToBack();
+            panel8.SendToBack();
+            panel9.SendToBack();
+            panel10.SendToBack();
+            panel11.SendToBack();
+        }
+
+        private void отчетыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.SendToBack();
+            panel2.SendToBack();
+            panel3.SendToBack();
+            panel4.BringToFront();
+            panel5.SendToBack();
+            panel6.SendToBack();
+            panel7.SendToBack();
+            panel8.SendToBack();
+            panel9.SendToBack();
+            panel10.SendToBack();
+            panel11.SendToBack();
+        }
+
+        private void ролиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.SendToBack();
+            panel2.SendToBack();
+            panel3.SendToBack();
+            panel4.SendToBack();
+            panel5.BringToFront();
+            panel6.SendToBack();
+            panel7.SendToBack();
+            panel8.SendToBack();
+            panel9.SendToBack();
+            panel10.SendToBack();
+            panel11.SendToBack();
+        }
+
+        private void задачиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.SendToBack();
+            panel2.SendToBack();
+            panel3.SendToBack();
+            panel4.SendToBack();
+            panel5.SendToBack();
+            panel6.BringToFront();
+            panel7.SendToBack();
+            panel8.SendToBack();
+            panel9.SendToBack();
+            panel10.SendToBack();
+            panel11.SendToBack();
+        }
+
+        private void задачиотчетыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.SendToBack();
+            panel2.SendToBack();
+            panel3.SendToBack();
+            panel4.SendToBack();
+            panel5.SendToBack();
+            panel6.SendToBack();
+            panel7.BringToFront();
+            panel8.SendToBack();
+            panel9.SendToBack();
+            panel10.SendToBack();
+            panel11.SendToBack();
+        }
+
+        private void статусыОтчетовToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.SendToBack();
+            panel2.SendToBack();
+            panel3.SendToBack();
+            panel4.SendToBack();
+            panel5.SendToBack();
+            panel6.SendToBack();
+            panel7.SendToBack();
+            panel8.BringToFront();
+            panel9.SendToBack();
+            panel10.SendToBack();
+            panel11.SendToBack();
+        }
+
+        private void пользователиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.SendToBack();
+            panel2.SendToBack();
+            panel3.SendToBack();
+            panel4.SendToBack();
+            panel5.SendToBack();
+            panel6.SendToBack();
+            panel7.SendToBack();
+            panel8.SendToBack();
+            panel9.BringToFront();
+            panel10.SendToBack();
+            panel11.SendToBack();
+        }
+
+        private void статусыПользователейToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.SendToBack();
+            panel2.SendToBack();
+            panel3.SendToBack();
+            panel4.SendToBack();
+            panel5.SendToBack();
+            panel6.SendToBack();
+            panel7.SendToBack();
+            panel8.SendToBack();
+            panel9.SendToBack();
+            panel10.BringToFront();
+            panel11.SendToBack();
         }
     }
 }
