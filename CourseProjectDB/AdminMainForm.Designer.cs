@@ -35,6 +35,13 @@
             this.брэндыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.машиныToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.статусыМашинToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ролиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.задачиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.задачиотчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.статусыОтчетовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.пользователиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.статусыПользователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.brandBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -58,12 +65,6 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.brandidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateofreceiptDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.carBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -155,14 +156,6 @@
             this.toolStripButton42 = new System.Windows.Forms.ToolStripButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.summarydistanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weightDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.driveridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.caridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusidDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rewardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.taskBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator5 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton29 = new System.Windows.Forms.ToolStripButton();
@@ -216,16 +209,6 @@
             this.toolStripButton63 = new System.Windows.Forms.ToolStripButton();
             this.panel10 = new System.Windows.Forms.Panel();
             this.dataGridView8 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patronymicDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birthdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.moneyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roleidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusidDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator8 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton50 = new System.Windows.Forms.ToolStripButton();
@@ -278,13 +261,30 @@
             this.toolStripSeparator30 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton70 = new System.Windows.Forms.ToolStripButton();
             this.fullUserViewTableAdapter = new CourseProjectDB.carriages_systemDataSetTableAdapters.FullUserViewTableAdapter();
-            this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ролиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.задачиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.задачиотчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.статусыОтчетовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.пользователиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.статусыПользователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.idDataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patronymicDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birthdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moneyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roleidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.statusidDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.idDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.summarydistanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weightDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.driveridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.caridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.statusidDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.rewardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brandidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateofreceiptDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.brandBindingNavigator)).BeginInit();
@@ -392,6 +392,55 @@
             this.статусыМашинToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
             this.статусыМашинToolStripMenuItem.Text = "Статусы машин";
             this.статусыМашинToolStripMenuItem.Click += new System.EventHandler(this.статусыМашинToolStripMenuItem_Click);
+            // 
+            // отчетыToolStripMenuItem
+            // 
+            this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
+            this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.отчетыToolStripMenuItem.Text = "Отчеты";
+            this.отчетыToolStripMenuItem.Click += new System.EventHandler(this.отчетыToolStripMenuItem_Click);
+            // 
+            // ролиToolStripMenuItem
+            // 
+            this.ролиToolStripMenuItem.Name = "ролиToolStripMenuItem";
+            this.ролиToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.ролиToolStripMenuItem.Text = "Роли";
+            this.ролиToolStripMenuItem.Click += new System.EventHandler(this.ролиToolStripMenuItem_Click);
+            // 
+            // задачиToolStripMenuItem
+            // 
+            this.задачиToolStripMenuItem.Name = "задачиToolStripMenuItem";
+            this.задачиToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.задачиToolStripMenuItem.Text = "Задачи";
+            this.задачиToolStripMenuItem.Click += new System.EventHandler(this.задачиToolStripMenuItem_Click);
+            // 
+            // задачиотчетыToolStripMenuItem
+            // 
+            this.задачиотчетыToolStripMenuItem.Name = "задачиотчетыToolStripMenuItem";
+            this.задачиотчетыToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
+            this.задачиотчетыToolStripMenuItem.Text = "Задачи-отчеты";
+            this.задачиотчетыToolStripMenuItem.Click += new System.EventHandler(this.задачиотчетыToolStripMenuItem_Click);
+            // 
+            // статусыОтчетовToolStripMenuItem
+            // 
+            this.статусыОтчетовToolStripMenuItem.Name = "статусыОтчетовToolStripMenuItem";
+            this.статусыОтчетовToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
+            this.статусыОтчетовToolStripMenuItem.Text = "Статусы задач";
+            this.статусыОтчетовToolStripMenuItem.Click += new System.EventHandler(this.статусыОтчетовToolStripMenuItem_Click);
+            // 
+            // пользователиToolStripMenuItem
+            // 
+            this.пользователиToolStripMenuItem.Name = "пользователиToolStripMenuItem";
+            this.пользователиToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
+            this.пользователиToolStripMenuItem.Text = "Пользователи";
+            this.пользователиToolStripMenuItem.Click += new System.EventHandler(this.пользователиToolStripMenuItem_Click);
+            // 
+            // статусыПользователейToolStripMenuItem
+            // 
+            this.статусыПользователейToolStripMenuItem.Name = "статусыПользователейToolStripMenuItem";
+            this.статусыПользователейToolStripMenuItem.Size = new System.Drawing.Size(149, 20);
+            this.статусыПользователейToolStripMenuItem.Text = "Статусы пользователей";
+            this.статусыПользователейToolStripMenuItem.Click += new System.EventHandler(this.статусыПользователейToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -603,43 +652,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(642, 418);
             this.dataGridView1.TabIndex = 11;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // brandidDataGridViewTextBoxColumn
-            // 
-            this.brandidDataGridViewTextBoxColumn.DataPropertyName = "brand_id";
-            this.brandidDataGridViewTextBoxColumn.HeaderText = "brand_id";
-            this.brandidDataGridViewTextBoxColumn.Name = "brandidDataGridViewTextBoxColumn";
-            // 
-            // yearDataGridViewTextBoxColumn
-            // 
-            this.yearDataGridViewTextBoxColumn.DataPropertyName = "year";
-            this.yearDataGridViewTextBoxColumn.HeaderText = "year";
-            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
-            // 
-            // numberDataGridViewTextBoxColumn
-            // 
-            this.numberDataGridViewTextBoxColumn.DataPropertyName = "number";
-            this.numberDataGridViewTextBoxColumn.HeaderText = "number";
-            this.numberDataGridViewTextBoxColumn.Name = "numberDataGridViewTextBoxColumn";
-            // 
-            // dateofreceiptDataGridViewTextBoxColumn
-            // 
-            this.dateofreceiptDataGridViewTextBoxColumn.DataPropertyName = "date_of_receipt";
-            this.dateofreceiptDataGridViewTextBoxColumn.HeaderText = "date_of_receipt";
-            this.dateofreceiptDataGridViewTextBoxColumn.Name = "dateofreceiptDataGridViewTextBoxColumn";
-            // 
-            // statusidDataGridViewTextBoxColumn
-            // 
-            this.statusidDataGridViewTextBoxColumn.DataPropertyName = "status_id";
-            this.statusidDataGridViewTextBoxColumn.HeaderText = "status_id";
-            this.statusidDataGridViewTextBoxColumn.Name = "statusidDataGridViewTextBoxColumn";
             // 
             // carBindingSource
             // 
@@ -1482,55 +1494,6 @@
             this.dataGridView5.Size = new System.Drawing.Size(842, 414);
             this.dataGridView5.TabIndex = 11;
             // 
-            // idDataGridViewTextBoxColumn4
-            // 
-            this.idDataGridViewTextBoxColumn4.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn4.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn4.Name = "idDataGridViewTextBoxColumn4";
-            this.idDataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // summarydistanceDataGridViewTextBoxColumn
-            // 
-            this.summarydistanceDataGridViewTextBoxColumn.DataPropertyName = "summary_distance";
-            this.summarydistanceDataGridViewTextBoxColumn.HeaderText = "summary_distance";
-            this.summarydistanceDataGridViewTextBoxColumn.Name = "summarydistanceDataGridViewTextBoxColumn";
-            // 
-            // weightDataGridViewTextBoxColumn1
-            // 
-            this.weightDataGridViewTextBoxColumn1.DataPropertyName = "weight";
-            this.weightDataGridViewTextBoxColumn1.HeaderText = "weight";
-            this.weightDataGridViewTextBoxColumn1.Name = "weightDataGridViewTextBoxColumn1";
-            // 
-            // driveridDataGridViewTextBoxColumn
-            // 
-            this.driveridDataGridViewTextBoxColumn.DataPropertyName = "driver_id";
-            this.driveridDataGridViewTextBoxColumn.HeaderText = "driver_id";
-            this.driveridDataGridViewTextBoxColumn.Name = "driveridDataGridViewTextBoxColumn";
-            // 
-            // caridDataGridViewTextBoxColumn
-            // 
-            this.caridDataGridViewTextBoxColumn.DataPropertyName = "car_id";
-            this.caridDataGridViewTextBoxColumn.HeaderText = "car_id";
-            this.caridDataGridViewTextBoxColumn.Name = "caridDataGridViewTextBoxColumn";
-            // 
-            // statusidDataGridViewTextBoxColumn1
-            // 
-            this.statusidDataGridViewTextBoxColumn1.DataPropertyName = "status_id";
-            this.statusidDataGridViewTextBoxColumn1.HeaderText = "status_id";
-            this.statusidDataGridViewTextBoxColumn1.Name = "statusidDataGridViewTextBoxColumn1";
-            // 
-            // rewardDataGridViewTextBoxColumn
-            // 
-            this.rewardDataGridViewTextBoxColumn.DataPropertyName = "reward";
-            this.rewardDataGridViewTextBoxColumn.HeaderText = "reward";
-            this.rewardDataGridViewTextBoxColumn.Name = "rewardDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn2
-            // 
-            this.nameDataGridViewTextBoxColumn2.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn2.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
-            // 
             // taskBindingSource
             // 
             this.taskBindingSource.DataMember = "task";
@@ -2030,67 +1993,6 @@
             this.dataGridView8.Size = new System.Drawing.Size(1041, 413);
             this.dataGridView8.TabIndex = 11;
             // 
-            // idDataGridViewTextBoxColumn6
-            // 
-            this.idDataGridViewTextBoxColumn6.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn6.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn6.Name = "idDataGridViewTextBoxColumn6";
-            this.idDataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // lastnameDataGridViewTextBoxColumn
-            // 
-            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "last_name";
-            this.lastnameDataGridViewTextBoxColumn.HeaderText = "last_name";
-            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
-            // 
-            // firstnameDataGridViewTextBoxColumn
-            // 
-            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "first_name";
-            this.firstnameDataGridViewTextBoxColumn.HeaderText = "first_name";
-            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
-            // 
-            // patronymicDataGridViewTextBoxColumn
-            // 
-            this.patronymicDataGridViewTextBoxColumn.DataPropertyName = "patronymic";
-            this.patronymicDataGridViewTextBoxColumn.HeaderText = "patronymic";
-            this.patronymicDataGridViewTextBoxColumn.Name = "patronymicDataGridViewTextBoxColumn";
-            // 
-            // birthdayDataGridViewTextBoxColumn
-            // 
-            this.birthdayDataGridViewTextBoxColumn.DataPropertyName = "birthday";
-            this.birthdayDataGridViewTextBoxColumn.HeaderText = "birthday";
-            this.birthdayDataGridViewTextBoxColumn.Name = "birthdayDataGridViewTextBoxColumn";
-            // 
-            // loginDataGridViewTextBoxColumn
-            // 
-            this.loginDataGridViewTextBoxColumn.DataPropertyName = "login";
-            this.loginDataGridViewTextBoxColumn.HeaderText = "login";
-            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            // 
-            // moneyDataGridViewTextBoxColumn
-            // 
-            this.moneyDataGridViewTextBoxColumn.DataPropertyName = "money";
-            this.moneyDataGridViewTextBoxColumn.HeaderText = "money";
-            this.moneyDataGridViewTextBoxColumn.Name = "moneyDataGridViewTextBoxColumn";
-            // 
-            // roleidDataGridViewTextBoxColumn
-            // 
-            this.roleidDataGridViewTextBoxColumn.DataPropertyName = "role_id";
-            this.roleidDataGridViewTextBoxColumn.HeaderText = "role_id";
-            this.roleidDataGridViewTextBoxColumn.Name = "roleidDataGridViewTextBoxColumn";
-            // 
-            // statusidDataGridViewTextBoxColumn2
-            // 
-            this.statusidDataGridViewTextBoxColumn2.DataPropertyName = "status_id";
-            this.statusidDataGridViewTextBoxColumn2.HeaderText = "status_id";
-            this.statusidDataGridViewTextBoxColumn2.Name = "statusidDataGridViewTextBoxColumn2";
-            // 
             // userBindingSource
             // 
             this.userBindingSource.DataMember = "user";
@@ -2504,54 +2406,187 @@
             // 
             this.fullUserViewTableAdapter.ClearBeforeFill = true;
             // 
-            // отчетыToolStripMenuItem
+            // idDataGridViewTextBoxColumn6
             // 
-            this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
-            this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.отчетыToolStripMenuItem.Text = "Отчеты";
-            this.отчетыToolStripMenuItem.Click += new System.EventHandler(this.отчетыToolStripMenuItem_Click);
+            this.idDataGridViewTextBoxColumn6.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn6.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn6.Name = "idDataGridViewTextBoxColumn6";
+            this.idDataGridViewTextBoxColumn6.ReadOnly = true;
             // 
-            // ролиToolStripMenuItem
+            // lastnameDataGridViewTextBoxColumn
             // 
-            this.ролиToolStripMenuItem.Name = "ролиToolStripMenuItem";
-            this.ролиToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.ролиToolStripMenuItem.Text = "Роли";
-            this.ролиToolStripMenuItem.Click += new System.EventHandler(this.ролиToolStripMenuItem_Click);
+            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "last_name";
+            this.lastnameDataGridViewTextBoxColumn.HeaderText = "last_name";
+            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
             // 
-            // задачиToolStripMenuItem
+            // firstnameDataGridViewTextBoxColumn
             // 
-            this.задачиToolStripMenuItem.Name = "задачиToolStripMenuItem";
-            this.задачиToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
-            this.задачиToolStripMenuItem.Text = "Задачи";
-            this.задачиToolStripMenuItem.Click += new System.EventHandler(this.задачиToolStripMenuItem_Click);
+            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "first_name";
+            this.firstnameDataGridViewTextBoxColumn.HeaderText = "first_name";
+            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
             // 
-            // задачиотчетыToolStripMenuItem
+            // patronymicDataGridViewTextBoxColumn
             // 
-            this.задачиотчетыToolStripMenuItem.Name = "задачиотчетыToolStripMenuItem";
-            this.задачиотчетыToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
-            this.задачиотчетыToolStripMenuItem.Text = "Задачи-отчеты";
-            this.задачиотчетыToolStripMenuItem.Click += new System.EventHandler(this.задачиотчетыToolStripMenuItem_Click);
+            this.patronymicDataGridViewTextBoxColumn.DataPropertyName = "patronymic";
+            this.patronymicDataGridViewTextBoxColumn.HeaderText = "patronymic";
+            this.patronymicDataGridViewTextBoxColumn.Name = "patronymicDataGridViewTextBoxColumn";
             // 
-            // статусыОтчетовToolStripMenuItem
+            // birthdayDataGridViewTextBoxColumn
             // 
-            this.статусыОтчетовToolStripMenuItem.Name = "статусыОтчетовToolStripMenuItem";
-            this.статусыОтчетовToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
-            this.статусыОтчетовToolStripMenuItem.Text = "Статусы задач";
-            this.статусыОтчетовToolStripMenuItem.Click += new System.EventHandler(this.статусыОтчетовToolStripMenuItem_Click);
+            this.birthdayDataGridViewTextBoxColumn.DataPropertyName = "birthday";
+            this.birthdayDataGridViewTextBoxColumn.HeaderText = "birthday";
+            this.birthdayDataGridViewTextBoxColumn.Name = "birthdayDataGridViewTextBoxColumn";
             // 
-            // пользователиToolStripMenuItem
+            // loginDataGridViewTextBoxColumn
             // 
-            this.пользователиToolStripMenuItem.Name = "пользователиToolStripMenuItem";
-            this.пользователиToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
-            this.пользователиToolStripMenuItem.Text = "Пользователи";
-            this.пользователиToolStripMenuItem.Click += new System.EventHandler(this.пользователиToolStripMenuItem_Click);
+            this.loginDataGridViewTextBoxColumn.DataPropertyName = "login";
+            this.loginDataGridViewTextBoxColumn.HeaderText = "login";
+            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
             // 
-            // статусыПользователейToolStripMenuItem
+            // passwordDataGridViewTextBoxColumn
             // 
-            this.статусыПользователейToolStripMenuItem.Name = "статусыПользователейToolStripMenuItem";
-            this.статусыПользователейToolStripMenuItem.Size = new System.Drawing.Size(149, 20);
-            this.статусыПользователейToolStripMenuItem.Text = "Статусы пользователей";
-            this.статусыПользователейToolStripMenuItem.Click += new System.EventHandler(this.статусыПользователейToolStripMenuItem_Click);
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            // 
+            // moneyDataGridViewTextBoxColumn
+            // 
+            this.moneyDataGridViewTextBoxColumn.DataPropertyName = "money";
+            this.moneyDataGridViewTextBoxColumn.HeaderText = "money";
+            this.moneyDataGridViewTextBoxColumn.Name = "moneyDataGridViewTextBoxColumn";
+            // 
+            // roleidDataGridViewTextBoxColumn
+            // 
+            this.roleidDataGridViewTextBoxColumn.DataPropertyName = "role_id";
+            this.roleidDataGridViewTextBoxColumn.DataSource = this.roleBindingSource;
+            this.roleidDataGridViewTextBoxColumn.DisplayMember = "name";
+            this.roleidDataGridViewTextBoxColumn.HeaderText = "role_id";
+            this.roleidDataGridViewTextBoxColumn.Name = "roleidDataGridViewTextBoxColumn";
+            this.roleidDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.roleidDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.roleidDataGridViewTextBoxColumn.ValueMember = "id";
+            // 
+            // statusidDataGridViewTextBoxColumn2
+            // 
+            this.statusidDataGridViewTextBoxColumn2.DataPropertyName = "status_id";
+            this.statusidDataGridViewTextBoxColumn2.DataSource = this.userstatusBindingSource;
+            this.statusidDataGridViewTextBoxColumn2.DisplayMember = "name";
+            this.statusidDataGridViewTextBoxColumn2.HeaderText = "status_id";
+            this.statusidDataGridViewTextBoxColumn2.Name = "statusidDataGridViewTextBoxColumn2";
+            this.statusidDataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.statusidDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.statusidDataGridViewTextBoxColumn2.ValueMember = "id";
+            // 
+            // idDataGridViewTextBoxColumn4
+            // 
+            this.idDataGridViewTextBoxColumn4.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn4.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn4.Name = "idDataGridViewTextBoxColumn4";
+            this.idDataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // summarydistanceDataGridViewTextBoxColumn
+            // 
+            this.summarydistanceDataGridViewTextBoxColumn.DataPropertyName = "summary_distance";
+            this.summarydistanceDataGridViewTextBoxColumn.HeaderText = "summary_distance";
+            this.summarydistanceDataGridViewTextBoxColumn.Name = "summarydistanceDataGridViewTextBoxColumn";
+            // 
+            // weightDataGridViewTextBoxColumn1
+            // 
+            this.weightDataGridViewTextBoxColumn1.DataPropertyName = "weight";
+            this.weightDataGridViewTextBoxColumn1.HeaderText = "weight";
+            this.weightDataGridViewTextBoxColumn1.Name = "weightDataGridViewTextBoxColumn1";
+            // 
+            // driveridDataGridViewTextBoxColumn
+            // 
+            this.driveridDataGridViewTextBoxColumn.DataPropertyName = "driver_id";
+            this.driveridDataGridViewTextBoxColumn.DataSource = this.userBindingSource;
+            this.driveridDataGridViewTextBoxColumn.DisplayMember = "login";
+            this.driveridDataGridViewTextBoxColumn.HeaderText = "driver_id";
+            this.driveridDataGridViewTextBoxColumn.Name = "driveridDataGridViewTextBoxColumn";
+            this.driveridDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.driveridDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.driveridDataGridViewTextBoxColumn.ValueMember = "id";
+            // 
+            // caridDataGridViewTextBoxColumn
+            // 
+            this.caridDataGridViewTextBoxColumn.DataPropertyName = "car_id";
+            this.caridDataGridViewTextBoxColumn.DataSource = this.carBindingSource;
+            this.caridDataGridViewTextBoxColumn.DisplayMember = "number";
+            this.caridDataGridViewTextBoxColumn.HeaderText = "car_id";
+            this.caridDataGridViewTextBoxColumn.Name = "caridDataGridViewTextBoxColumn";
+            this.caridDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.caridDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.caridDataGridViewTextBoxColumn.ValueMember = "id";
+            // 
+            // statusidDataGridViewTextBoxColumn1
+            // 
+            this.statusidDataGridViewTextBoxColumn1.DataPropertyName = "status_id";
+            this.statusidDataGridViewTextBoxColumn1.DataSource = this.taskstatusBindingSource;
+            this.statusidDataGridViewTextBoxColumn1.DisplayMember = "name";
+            this.statusidDataGridViewTextBoxColumn1.HeaderText = "status_id";
+            this.statusidDataGridViewTextBoxColumn1.Name = "statusidDataGridViewTextBoxColumn1";
+            this.statusidDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.statusidDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.statusidDataGridViewTextBoxColumn1.ValueMember = "id";
+            // 
+            // rewardDataGridViewTextBoxColumn
+            // 
+            this.rewardDataGridViewTextBoxColumn.DataPropertyName = "reward";
+            this.rewardDataGridViewTextBoxColumn.HeaderText = "reward";
+            this.rewardDataGridViewTextBoxColumn.Name = "rewardDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn2
+            // 
+            this.nameDataGridViewTextBoxColumn2.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn2.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // brandidDataGridViewTextBoxColumn
+            // 
+            this.brandidDataGridViewTextBoxColumn.DataPropertyName = "brand_id";
+            this.brandidDataGridViewTextBoxColumn.DataSource = this.brandBindingSource;
+            this.brandidDataGridViewTextBoxColumn.DisplayMember = "model";
+            this.brandidDataGridViewTextBoxColumn.HeaderText = "brand_id";
+            this.brandidDataGridViewTextBoxColumn.Name = "brandidDataGridViewTextBoxColumn";
+            this.brandidDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.brandidDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.brandidDataGridViewTextBoxColumn.ValueMember = "id";
+            // 
+            // yearDataGridViewTextBoxColumn
+            // 
+            this.yearDataGridViewTextBoxColumn.DataPropertyName = "year";
+            this.yearDataGridViewTextBoxColumn.HeaderText = "year";
+            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
+            // 
+            // numberDataGridViewTextBoxColumn
+            // 
+            this.numberDataGridViewTextBoxColumn.DataPropertyName = "number";
+            this.numberDataGridViewTextBoxColumn.HeaderText = "number";
+            this.numberDataGridViewTextBoxColumn.Name = "numberDataGridViewTextBoxColumn";
+            // 
+            // dateofreceiptDataGridViewTextBoxColumn
+            // 
+            this.dateofreceiptDataGridViewTextBoxColumn.DataPropertyName = "date_of_receipt";
+            this.dateofreceiptDataGridViewTextBoxColumn.HeaderText = "date_of_receipt";
+            this.dateofreceiptDataGridViewTextBoxColumn.Name = "dateofreceiptDataGridViewTextBoxColumn";
+            // 
+            // statusidDataGridViewTextBoxColumn
+            // 
+            this.statusidDataGridViewTextBoxColumn.DataPropertyName = "status_id";
+            this.statusidDataGridViewTextBoxColumn.DataSource = this.carstatusBindingSource;
+            this.statusidDataGridViewTextBoxColumn.DisplayMember = "name";
+            this.statusidDataGridViewTextBoxColumn.HeaderText = "status_id";
+            this.statusidDataGridViewTextBoxColumn.Name = "statusidDataGridViewTextBoxColumn";
+            this.statusidDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.statusidDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.statusidDataGridViewTextBoxColumn.ValueMember = "id";
             // 
             // AdminMainForm
             // 
@@ -2559,6 +2594,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1051, 616);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel10);
@@ -2568,8 +2605,6 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel8);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AdminMainForm";
             this.Text = "Панель администратора";
@@ -2815,12 +2850,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator27;
         private System.Windows.Forms.ToolStripButton toolStripButton63;
         private System.Windows.Forms.BindingSource carBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn brandidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn yearDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateofreceiptDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView2;
         private carriages_systemDataSetTableAdapters.car_statusTableAdapter car_statusTableAdapter;
         private System.Windows.Forms.BindingSource carstatusBindingSource;
@@ -2844,14 +2873,6 @@
         private carriages_systemDataSetTableAdapters.taskTableAdapter taskTableAdapter;
         private System.Windows.Forms.BindingSource taskBindingSource;
         private System.Windows.Forms.DataGridView dataGridView6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn summarydistanceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn weightDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn driveridDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn caridDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusidDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rewardDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn2;
         private carriages_systemDataSetTableAdapters.task_reportTableAdapter task_reportTableAdapter;
         private System.Windows.Forms.BindingSource taskreportBindingSource;
         private System.Windows.Forms.DataGridView dataGridView7;
@@ -2865,16 +2886,6 @@
         private carriages_systemDataSetTableAdapters.userTableAdapter userTableAdapter;
         private System.Windows.Forms.BindingSource userBindingSource;
         private System.Windows.Forms.DataGridView dataGridView9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patronymicDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn birthdayDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn moneyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn roleidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusidDataGridViewTextBoxColumn2;
         private carriages_systemDataSetTableAdapters.user_statusTableAdapter user_statusTableAdapter;
         private System.Windows.Forms.BindingSource userstatusBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn7;
@@ -2916,5 +2927,29 @@
         private System.Windows.Forms.ToolStripMenuItem статусыОтчетовToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem пользователиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem статусыПользователейToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patronymicDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn birthdayDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn moneyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn roleidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn statusidDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn summarydistanceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn weightDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn driveridDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn caridDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn statusidDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rewardDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn brandidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn yearDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateofreceiptDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn statusidDataGridViewTextBoxColumn;
     }
 }
