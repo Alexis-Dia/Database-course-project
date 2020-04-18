@@ -398,9 +398,9 @@
             this.panel1.Controls.Add(this.brandBindingNavigator);
             this.panel1.Controls.Add(this.brandDataGridView);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1293, 592);
+            this.panel1.Size = new System.Drawing.Size(1293, 616);
             this.panel1.TabIndex = 1;
             // 
             // brandBindingNavigator
@@ -550,7 +550,7 @@
             this.brandDataGridView.DataSource = this.brandBindingSource;
             this.brandDataGridView.Location = new System.Drawing.Point(3, 31);
             this.brandDataGridView.Name = "brandDataGridView";
-            this.brandDataGridView.Size = new System.Drawing.Size(300, 128);
+            this.brandDataGridView.Size = new System.Drawing.Size(442, 414);
             this.brandDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
@@ -582,9 +582,9 @@
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.bindingNavigator1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 24);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1293, 592);
+            this.panel2.Size = new System.Drawing.Size(1293, 616);
             this.panel2.TabIndex = 2;
             // 
             // dataGridView1
@@ -601,7 +601,7 @@
             this.dataGridView1.DataSource = this.carBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, 27);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 132);
+            this.dataGridView1.Size = new System.Drawing.Size(642, 418);
             this.dataGridView1.TabIndex = 11;
             // 
             // idDataGridViewTextBoxColumn
@@ -776,9 +776,9 @@
             this.panel3.Controls.Add(this.dataGridView2);
             this.panel3.Controls.Add(this.bindingNavigator2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 24);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1293, 592);
+            this.panel3.Size = new System.Drawing.Size(1293, 616);
             this.panel3.TabIndex = 3;
             // 
             // dataGridView2
@@ -791,7 +791,7 @@
             this.dataGridView2.DataSource = this.carstatusBindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(2, 29);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(240, 130);
+            this.dataGridView2.Size = new System.Drawing.Size(241, 416);
             this.dataGridView2.TabIndex = 11;
             // 
             // idDataGridViewTextBoxColumn1
@@ -941,9 +941,9 @@
             this.panel4.Controls.Add(this.dataGridView3);
             this.panel4.Controls.Add(this.bindingNavigator3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 24);
+            this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1293, 592);
+            this.panel4.Size = new System.Drawing.Size(1293, 616);
             this.panel4.TabIndex = 4;
             // 
             // dataGridView3
@@ -959,7 +959,7 @@
             this.dataGridView3.DataSource = this.reportBindingSource;
             this.dataGridView3.Location = new System.Drawing.Point(0, 31);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(240, 128);
+            this.dataGridView3.Size = new System.Drawing.Size(541, 414);
             this.dataGridView3.TabIndex = 11;
             // 
             // idDataGridViewTextBoxColumn2
@@ -1128,9 +1128,9 @@
             this.panel5.Controls.Add(this.dataGridView7);
             this.panel5.Controls.Add(this.bindingNavigator7);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 24);
+            this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1293, 592);
+            this.panel5.Size = new System.Drawing.Size(1293, 616);
             this.panel5.TabIndex = 8;
             // 
             // dataGridView7
@@ -1143,7 +1143,7 @@
             this.dataGridView7.DataSource = this.taskstatusBindingSource;
             this.dataGridView7.Location = new System.Drawing.Point(3, 32);
             this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.Size = new System.Drawing.Size(240, 132);
+            this.dataGridView7.Size = new System.Drawing.Size(240, 413);
             this.dataGridView7.TabIndex = 11;
             // 
             // idDataGridViewTextBoxColumn5
@@ -1292,9 +1292,10 @@
             // 
             this.panel6.Controls.Add(this.dataGridView6);
             this.panel6.Controls.Add(this.bindingNavigator6);
-            this.panel6.Location = new System.Drawing.Point(657, 206);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(303, 167);
+            this.panel6.Size = new System.Drawing.Size(1293, 616);
             this.panel6.TabIndex = 7;
             // 
             // dataGridView6
@@ -1307,7 +1308,7 @@
             this.dataGridView6.DataSource = this.taskreportBindingSource;
             this.dataGridView6.Location = new System.Drawing.Point(4, 32);
             this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(240, 132);
+            this.dataGridView6.Size = new System.Drawing.Size(239, 413);
             this.dataGridView6.TabIndex = 11;
             // 
             // taskidDataGridViewTextBoxColumn
@@ -1456,9 +1457,10 @@
             // 
             this.panel7.Controls.Add(this.dataGridView5);
             this.panel7.Controls.Add(this.bindingNavigator5);
-            this.panel7.Location = new System.Drawing.Point(335, 206);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(316, 167);
+            this.panel7.Size = new System.Drawing.Size(1293, 616);
             this.panel7.TabIndex = 6;
             // 
             // dataGridView5
@@ -1477,7 +1479,7 @@
             this.dataGridView5.DataSource = this.taskBindingSource;
             this.dataGridView5.Location = new System.Drawing.Point(2, 31);
             this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(240, 133);
+            this.dataGridView5.Size = new System.Drawing.Size(842, 414);
             this.dataGridView5.TabIndex = 11;
             // 
             // idDataGridViewTextBoxColumn4
@@ -1663,9 +1665,10 @@
             // 
             this.panel8.Controls.Add(this.dataGridView4);
             this.panel8.Controls.Add(this.bindingNavigator4);
-            this.panel8.Location = new System.Drawing.Point(15, 206);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(314, 167);
+            this.panel8.Size = new System.Drawing.Size(1293, 616);
             this.panel8.TabIndex = 5;
             // 
             // dataGridView4
@@ -1679,7 +1682,7 @@
             this.dataGridView4.DataSource = this.roleBindingSource;
             this.dataGridView4.Location = new System.Drawing.Point(2, 32);
             this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(240, 132);
+            this.dataGridView4.Size = new System.Drawing.Size(340, 413);
             this.dataGridView4.TabIndex = 11;
             // 
             // idDataGridViewTextBoxColumn3
@@ -1836,9 +1839,9 @@
             this.panel9.Controls.Add(this.dataGridView9);
             this.panel9.Controls.Add(this.bindingNavigator9);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(0, 24);
+            this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1293, 592);
+            this.panel9.Size = new System.Drawing.Size(1293, 616);
             this.panel9.TabIndex = 8;
             // 
             // dataGridView9
@@ -1851,7 +1854,7 @@
             this.dataGridView9.DataSource = this.userstatusBindingSource;
             this.dataGridView9.Location = new System.Drawing.Point(4, 32);
             this.dataGridView9.Name = "dataGridView9";
-            this.dataGridView9.Size = new System.Drawing.Size(240, 141);
+            this.dataGridView9.Size = new System.Drawing.Size(239, 413);
             this.dataGridView9.TabIndex = 0;
             // 
             // idDataGridViewTextBoxColumn7
@@ -2001,9 +2004,9 @@
             this.panel10.Controls.Add(this.dataGridView8);
             this.panel10.Controls.Add(this.bindingNavigator8);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(0, 24);
+            this.panel10.Location = new System.Drawing.Point(0, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1293, 592);
+            this.panel10.Size = new System.Drawing.Size(1293, 616);
             this.panel10.TabIndex = 7;
             // 
             // dataGridView8
@@ -2024,7 +2027,7 @@
             this.dataGridView8.DataSource = this.userBindingSource;
             this.dataGridView8.Location = new System.Drawing.Point(0, 32);
             this.dataGridView8.Name = "dataGridView8";
-            this.dataGridView8.Size = new System.Drawing.Size(240, 141);
+            this.dataGridView8.Size = new System.Drawing.Size(1041, 413);
             this.dataGridView8.TabIndex = 11;
             // 
             // idDataGridViewTextBoxColumn6
@@ -2281,9 +2284,9 @@
             this.panel11.Controls.Add(this.dataGridView10);
             this.panel11.Controls.Add(this.bindingNavigator10);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(0, 24);
+            this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1293, 592);
+            this.panel11.Size = new System.Drawing.Size(1293, 616);
             this.panel11.TabIndex = 11;
             // 
             // dataGridView10
@@ -2304,7 +2307,7 @@
             this.dataGridView10.DataSource = this.fullUserViewBindingSource;
             this.dataGridView10.Location = new System.Drawing.Point(-1, 26);
             this.dataGridView10.Name = "dataGridView10";
-            this.dataGridView10.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView10.Size = new System.Drawing.Size(1042, 419);
             this.dataGridView10.TabIndex = 13;
             // 
             // idDataGridViewTextBoxColumn8
@@ -2532,8 +2535,8 @@
             // статусыОтчетовToolStripMenuItem
             // 
             this.статусыОтчетовToolStripMenuItem.Name = "статусыОтчетовToolStripMenuItem";
-            this.статусыОтчетовToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
-            this.статусыОтчетовToolStripMenuItem.Text = "Статусы отчетов";
+            this.статусыОтчетовToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
+            this.статусыОтчетовToolStripMenuItem.Text = "Статусы задач";
             this.статусыОтчетовToolStripMenuItem.Click += new System.EventHandler(this.статусыОтчетовToolStripMenuItem_Click);
             // 
             // пользователиToolStripMenuItem
@@ -2555,10 +2558,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1293, 616);
-            this.Controls.Add(this.panel11);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.panel10);
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel3);
@@ -2566,7 +2566,10 @@
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.panel11);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.panel10);
+            this.Controls.Add(this.panel5);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AdminMainForm";
             this.Text = "Панель администратора";

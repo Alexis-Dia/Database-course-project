@@ -212,31 +212,16 @@ namespace CourseProjectDB
             panel2.SendToBack();
             panel3.SendToBack();
             panel4.SendToBack();
-            panel5.BringToFront();
+            panel5.SendToBack();
             panel6.SendToBack();
             panel7.SendToBack();
-            panel8.SendToBack();
+            panel8.BringToFront();
             panel9.SendToBack();
             panel10.SendToBack();
             panel11.SendToBack();
         }
 
         private void задачиToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            panel1.SendToBack();
-            panel2.SendToBack();
-            panel3.SendToBack();
-            panel4.SendToBack();
-            panel5.SendToBack();
-            panel6.BringToFront();
-            panel7.SendToBack();
-            panel8.SendToBack();
-            panel9.SendToBack();
-            panel10.SendToBack();
-            panel11.SendToBack();
-        }
-
-        private void задачиотчетыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panel1.SendToBack();
             panel2.SendToBack();
@@ -251,16 +236,31 @@ namespace CourseProjectDB
             panel11.SendToBack();
         }
 
-        private void статусыОтчетовToolStripMenuItem_Click(object sender, EventArgs e)
+        private void задачиотчетыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panel1.SendToBack();
             panel2.SendToBack();
             panel3.SendToBack();
             panel4.SendToBack();
             panel5.SendToBack();
+            panel6.BringToFront();
+            panel7.SendToBack();
+            panel8.SendToBack();
+            panel9.SendToBack();
+            panel10.SendToBack();
+            panel11.SendToBack();
+        }
+
+        private void статусыОтчетовToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.SendToBack();
+            panel2.SendToBack();
+            panel3.SendToBack();
+            panel4.SendToBack();
+            panel5.BringToFront();
             panel6.SendToBack();
             panel7.SendToBack();
-            panel8.BringToFront();
+            panel8.SendToBack();
             panel9.SendToBack();
             panel10.SendToBack();
             panel11.SendToBack();
@@ -276,8 +276,8 @@ namespace CourseProjectDB
             panel6.SendToBack();
             panel7.SendToBack();
             panel8.SendToBack();
-            panel9.BringToFront();
-            panel10.SendToBack();
+            panel9.SendToBack();
+            panel10.BringToFront();
             panel11.SendToBack();
         }
 
@@ -291,8 +291,8 @@ namespace CourseProjectDB
             panel6.SendToBack();
             panel7.SendToBack();
             panel8.SendToBack();
-            panel9.SendToBack();
-            panel10.BringToFront();
+            panel9.BringToFront();
+            panel10.SendToBack();
             panel11.SendToBack();
         }
     }
