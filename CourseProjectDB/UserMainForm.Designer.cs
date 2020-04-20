@@ -293,7 +293,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Location = new System.Drawing.Point(12, 106);
+            this.panel2.Location = new System.Drawing.Point(12, 46);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(995, 392);
             this.panel2.TabIndex = 14;
@@ -317,9 +317,9 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.dataGridView2);
-            this.panel3.Location = new System.Drawing.Point(348, 27);
+            this.panel3.Location = new System.Drawing.Point(12, 27);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(659, 392);
+            this.panel3.Size = new System.Drawing.Size(962, 392);
             this.panel3.TabIndex = 14;
             // 
             // UserMainForm
