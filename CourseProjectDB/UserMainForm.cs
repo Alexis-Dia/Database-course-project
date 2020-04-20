@@ -133,6 +133,14 @@ namespace CourseProjectDB
 
         private void всеОтчетыToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            DataRow row = this.dataTable.Rows[0];
+            int userId = (int)row["id"];
+            Connection connection = new Connection();
+            SqlDataAdapter sqlDataAdapter = connection.getConnection("SELECT * from GetReportsForActiveTask(" + userId + ")");
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            dataGridView2.DataSource = dataTable;
+
             panel1.SendToBack();
             panel2.SendToBack();
             panel3.BringToFront();
