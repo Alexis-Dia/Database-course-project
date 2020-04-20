@@ -76,7 +76,7 @@ namespace CourseProjectDB
 
             //Example for getting tasks using users functions:
             Connection connection = new Connection();
-            SqlDataAdapter sqlDataAdapter = connection.getConnection("SELECT * from GetMineFinishedTasks(2)");
+            SqlDataAdapter sqlDataAdapter = connection.getConnection("SELECT * from GetFreeTasks()");
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
@@ -114,6 +114,14 @@ namespace CourseProjectDB
 
         private void текущаяЗадачаToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            DataRow row = this.dataTable.Rows[0];
+            int userId = (int) row["id"];
+            Connection connection = new Connection();
+            SqlDataAdapter sqlDataAdapter = connection.getConnection("SELECT * from GetMineFinishedTasks(" + userId + ")");
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+
             panel1.SendToBack();
             panel2.BringToFront();
             panel2.Location = new Point(0, 30);
@@ -147,6 +155,14 @@ namespace CourseProjectDB
 
         private void текущаяЗадачаToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            DataRow row = this.dataTable.Rows[0];
+            int userId = (int)row["id"];
+            Connection connection = new Connection();
+            SqlDataAdapter sqlDataAdapter = connection.getConnection("SELECT * from GetMineCurrentTasks(" + userId + ")");
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+
             panel1.SendToBack();
             panel2.BringToFront();
             panel2.Location = new Point(0, 30);
