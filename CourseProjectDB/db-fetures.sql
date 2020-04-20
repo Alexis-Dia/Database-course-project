@@ -81,3 +81,13 @@ WHERE t.driver_id = @driver_id AND t.id = @task_id
 DROP FUNCTION GetReportsByDrivarIdAndTaskId
 GO
 SELECT * FROM dbo.GetReportsByDrivarIdAndTaskId(3, 2)
+
+GO
+CREATE FUNCTION GetReportsForActiveTask(@driver_id int)
+RETURNS TABLE
+AS
+RETURN
+SELECT * FROM task_report where task_id = (SELECT top 1 id FROM task WHERE driver_id = @driver_id AND status_id = 2)
+DROP FUNCTION GetReportsForActiveTask
+GO
+SELECT * FROM dbo.GetReportsForActiveTask(2)
