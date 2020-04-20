@@ -20,6 +20,18 @@ GO
 EXECUTE GetFreeTasks
 
 GO
+CREATE FUNCTION GetFreeTasks()
+RETURNS TABLE
+AS
+RETURN
+SELECT *
+FROM [task] AS t
+WHERE t.status_id = 1
+DROP FUNCTION GetMineFinishedTasks
+GO
+SELECT * FROM dbo.GetFreeTasks()
+
+GO
 CREATE FUNCTION GetMineFinishedTasks(@driver_id int)
 RETURNS TABLE
 AS
@@ -30,6 +42,18 @@ WHERE t.driver_id = @driver_id AND t.status_id = 5
 DROP FUNCTION GetMineFinishedTasks
 GO
 SELECT * FROM dbo.GetMineFinishedTasks(2)
+
+GO
+CREATE PROCEDURE GetMineFinishedTasks
+(@driver_id int OUTPUT)
+AS
+SELECT *
+FROM [task] AS t
+WHERE t.driver_id = @driver_id AND t.status_id = 5
+GO
+DROP PROCEDURE GetMineFinishedTasks
+GO
+EXECUTE GetMineFinishedTasks @driver_id=2
 
 GO
 CREATE FUNCTION GetMineCurrentTasks(@driver_id int)

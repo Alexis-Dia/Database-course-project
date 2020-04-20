@@ -69,11 +69,11 @@ namespace CourseProjectDB
             dataGridView1.DataSource = dt;*/
 
             //Example for getting tasks using users functions:
-/*            Connection connection = new Connection();
+            Connection connection = new Connection();
             SqlDataAdapter sqlDataAdapter = connection.getConnection("SELECT * from GetMineFinishedTasks(2)");
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
-            dataGridView1.DataSource = dataTable;*/
+            dataGridView1.DataSource = dataTable;
 
             panel1.SendToBack();
             panel2.BringToFront();
