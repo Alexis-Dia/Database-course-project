@@ -34,6 +34,7 @@
             this.задачиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.свободныеЗадачиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.текущаяЗадачаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.текущаяЗадачаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.всеОтчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьОтчетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,15 +54,15 @@
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -73,7 +74,7 @@
             this.отчетыToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1037, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -98,7 +99,8 @@
             // 
             this.задачиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.свободныеЗадачиToolStripMenuItem,
-            this.текущаяЗадачаToolStripMenuItem});
+            this.текущаяЗадачаToolStripMenuItem,
+            this.текущаяЗадачаToolStripMenuItem1});
             this.задачиToolStripMenuItem.Name = "задачиToolStripMenuItem";
             this.задачиToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.задачиToolStripMenuItem.Text = "Задачи";
@@ -106,16 +108,23 @@
             // свободныеЗадачиToolStripMenuItem
             // 
             this.свободныеЗадачиToolStripMenuItem.Name = "свободныеЗадачиToolStripMenuItem";
-            this.свободныеЗадачиToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.свободныеЗадачиToolStripMenuItem.Text = "Мои задачи";
+            this.свободныеЗадачиToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.свободныеЗадачиToolStripMenuItem.Text = "Свободные задачи";
             this.свободныеЗадачиToolStripMenuItem.Click += new System.EventHandler(this.свободныеЗадачиToolStripMenuItem_Click);
             // 
             // текущаяЗадачаToolStripMenuItem
             // 
             this.текущаяЗадачаToolStripMenuItem.Name = "текущаяЗадачаToolStripMenuItem";
-            this.текущаяЗадачаToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.текущаяЗадачаToolStripMenuItem.Text = "Текущая задача";
+            this.текущаяЗадачаToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.текущаяЗадачаToolStripMenuItem.Text = "Завершенные задачи";
             this.текущаяЗадачаToolStripMenuItem.Click += new System.EventHandler(this.текущаяЗадачаToolStripMenuItem_Click);
+            // 
+            // текущаяЗадачаToolStripMenuItem1
+            // 
+            this.текущаяЗадачаToolStripMenuItem1.Name = "текущаяЗадачаToolStripMenuItem1";
+            this.текущаяЗадачаToolStripMenuItem1.Size = new System.Drawing.Size(192, 22);
+            this.текущаяЗадачаToolStripMenuItem1.Text = "Текущая задача";
+            this.текущаяЗадачаToolStripMenuItem1.Click += new System.EventHandler(this.текущаяЗадачаToolStripMenuItem1_Click);
             // 
             // отчетыToolStripMenuItem
             // 
@@ -129,20 +138,19 @@
             // всеОтчетыToolStripMenuItem
             // 
             this.всеОтчетыToolStripMenuItem.Name = "всеОтчетыToolStripMenuItem";
-            this.всеОтчетыToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.всеОтчетыToolStripMenuItem.Text = "Все отчеты";
+            this.всеОтчетыToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.всеОтчетыToolStripMenuItem.Text = "Все отчеты текущего задания";
             this.всеОтчетыToolStripMenuItem.Click += new System.EventHandler(this.всеОтчетыToolStripMenuItem_Click);
             // 
             // добавитьОтчетToolStripMenuItem
             // 
             this.добавитьОтчетToolStripMenuItem.Name = "добавитьОтчетToolStripMenuItem";
-            this.добавитьОтчетToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.добавитьОтчетToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
             this.добавитьОтчетToolStripMenuItem.Text = "Добавить отчет";
             this.добавитьОтчетToolStripMenuItem.Click += new System.EventHandler(this.добавитьОтчетToolStripMenuItem_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label15);
@@ -159,7 +167,7 @@
             this.panel1.Controls.Add(this.label11);
             this.panel1.Location = new System.Drawing.Point(12, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(691, 411);
+            this.panel1.Size = new System.Drawing.Size(330, 392);
             this.panel1.TabIndex = 1;
             // 
             // label17
@@ -285,41 +293,42 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Location = new System.Drawing.Point(12, 26);
+            this.panel2.Location = new System.Drawing.Point(348, 46);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(397, 412);
+            this.panel2.Size = new System.Drawing.Size(659, 392);
             this.panel2.TabIndex = 14;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.dataGridView2);
-            this.panel3.Location = new System.Drawing.Point(416, 16);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(341, 392);
-            this.panel3.TabIndex = 14;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 86);
+            this.dataGridView1.Location = new System.Drawing.Point(17, 16);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(622, 150);
             this.dataGridView1.TabIndex = 0;
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(32, 69);
+            this.dataGridView2.Location = new System.Drawing.Point(17, 16);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView2.Size = new System.Drawing.Size(622, 150);
             this.dataGridView2.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.dataGridView2);
+            this.panel3.Location = new System.Drawing.Point(348, 27);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(659, 392);
+            this.panel3.TabIndex = 14;
             // 
             // UserMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1037, 450);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -331,9 +340,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,9 +374,10 @@
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.ToolStripMenuItem текущаяЗадачаToolStripMenuItem1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Panel panel3;
     }
 }

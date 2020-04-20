@@ -38,7 +38,13 @@ namespace CourseProjectDB
 
         private void UserForm_Load(object sender, EventArgs e)
         {
-            
+            panel1.BringToFront();
+            panel1.Location = new Point(0, 30);
+            panel2.SendToBack();
+            panel3.SendToBack();
+            panel1.Visible = true;
+            panel3.Visible = false;
+            panel2.Visible = false;
         }
 
         private void выйтиToolStripMenuItem_Click(object sender, EventArgs e)
@@ -77,6 +83,11 @@ namespace CourseProjectDB
 
             panel1.SendToBack();
             panel2.BringToFront();
+            panel2.Location = new Point(0, 30);
+            panel3.SendToBack();
+            panel1.Visible = false;
+            panel2.Visible = true;
+            panel3.Visible = false;
         }
 
         private void мояИнформацияToolStripMenuItem_Click(object sender, EventArgs e)
@@ -87,7 +98,12 @@ namespace CourseProjectDB
             sqlDataAdapter.Fill(dataTable);
 
             panel1.BringToFront();
+            panel1.Location = new Point(0, 30);
             panel2.SendToBack();
+            panel3.SendToBack();
+            panel1.Visible = true;
+            panel3.Visible = false;
+            panel2.Visible = false;
             //dataGridView1.DataSource = dataTable;
         }
 
@@ -100,18 +116,44 @@ namespace CourseProjectDB
         {
             panel1.SendToBack();
             panel2.BringToFront();
+            panel2.Location = new Point(0, 30);
+            panel3.SendToBack();
+            panel1.Visible = false;
+            panel2.Visible = true;
+            panel3.Visible = false;
         }
 
         private void всеОтчетыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panel1.SendToBack();
-            panel2.BringToFront();
+            panel2.SendToBack();
+            panel3.BringToFront();
+            panel3.Location = new Point(0, 30);
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = true;
         }
 
         private void добавитьОтчетToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panel1.SendToBack();
+            panel2.SendToBack();
+            panel3.BringToFront();
+            panel3.Location = new Point(0, 30);
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = true;
+        }
+
+        private void текущаяЗадачаToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            panel1.SendToBack();
             panel2.BringToFront();
+            panel2.Location = new Point(0, 30);
+            panel3.SendToBack();
+            panel1.Visible = false;
+            panel2.Visible = true;
+            panel3.Visible = false;
         }
     }
 }
