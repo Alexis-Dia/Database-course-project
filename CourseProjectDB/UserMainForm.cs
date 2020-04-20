@@ -54,6 +54,27 @@ namespace CourseProjectDB
 
         private void свободныеЗадачиToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+            //Example for getting tasks using stored procedures:
+
+            /*DataTable dt = new DataTable();
+            SqlConnection myConn = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=True;User ID=root;Password=root;");
+            myConn.Open();
+            SqlCommand myCmd = new SqlCommand("GetMineFinishedTasks", myConn);
+            myCmd.CommandType = CommandType.StoredProcedure;
+            SqlParameter lobjSqlParam = new SqlParameter("@driver_id", 2);
+            myCmd.Parameters.Add(lobjSqlParam);
+            SqlDataAdapter da = new SqlDataAdapter(myCmd);
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;*/
+
+            //Example for getting tasks using users functions:
+/*            Connection connection = new Connection();
+            SqlDataAdapter sqlDataAdapter = connection.getConnection("SELECT * from GetMineFinishedTasks(2)");
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;*/
+
             panel1.SendToBack();
             panel2.BringToFront();
         }
