@@ -164,6 +164,12 @@ namespace CourseProjectDB
             panel1.Visible = false;
             panel2.Visible = false;
             panel3.Visible = true;
+
+            if (dataTable.Rows.Count == 0)
+            {
+                button3.Enabled = false;
+            }
+
         }
 
         private void добавитьОтчетToolStripMenuItem_Click(object sender, EventArgs e)
@@ -247,6 +253,8 @@ namespace CourseProjectDB
                     da.Fill(dt);
                     dataGridView2.DataSource = dt;
 
+                    button3.Enabled = true;
+
                     MessageBox.Show("Отчет был успешно добавлен.");
                 }
                 else
@@ -270,6 +278,11 @@ namespace CourseProjectDB
             {
                 MessageBox.Show("Выберите задачу!");
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Задача отправлена на валидацию администратором!");
         }
     }
 }
