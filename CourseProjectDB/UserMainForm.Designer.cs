@@ -37,7 +37,6 @@
             this.текущаяЗадачаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.всеОтчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.добавитьОтчетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -138,8 +137,7 @@
             // отчетыToolStripMenuItem
             // 
             this.отчетыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.всеОтчетыToolStripMenuItem,
-            this.добавитьОтчетToolStripMenuItem});
+            this.всеОтчетыToolStripMenuItem});
             this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
             this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.отчетыToolStripMenuItem.Text = "Отчеты";
@@ -150,13 +148,6 @@
             this.всеОтчетыToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
             this.всеОтчетыToolStripMenuItem.Text = "Все отчеты текущего задания";
             this.всеОтчетыToolStripMenuItem.Click += new System.EventHandler(this.всеОтчетыToolStripMenuItem_Click);
-            // 
-            // добавитьОтчетToolStripMenuItem
-            // 
-            this.добавитьОтчетToolStripMenuItem.Name = "добавитьОтчетToolStripMenuItem";
-            this.добавитьОтчетToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
-            this.добавитьОтчетToolStripMenuItem.Text = "Добавить отчет";
-            this.добавитьОтчетToolStripMenuItem.Click += new System.EventHandler(this.добавитьОтчетToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -452,7 +443,6 @@
         private System.Windows.Forms.ToolStripMenuItem текущаяЗадачаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отчетыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem всеОтчетыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem добавитьОтчетToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label11;

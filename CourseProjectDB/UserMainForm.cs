@@ -16,6 +16,7 @@ namespace CourseProjectDB
 
         Main main = null;
         DataTable dataTable = null;
+        DataTable currentTasksTable = null;
 
         public UserMainForm(Main main, DataTable dataTable)
         {
@@ -34,6 +35,13 @@ namespace CourseProjectDB
 
             panel1.BringToFront();
             panel2.SendToBack();
+
+            int userId = (int)row["id"];
+            Connection connection = new Connection();
+            SqlDataAdapter sqlDataAdapter = connection.getConnection("SELECT * from GetMineCurrentTasks(" + userId + ")");
+            DataTable currentTasksTable = new DataTable();
+            sqlDataAdapter.Fill(currentTasksTable);
+            this.currentTasksTable = currentTasksTable;
         }
 
         private void UserForm_Load(object sender, EventArgs e)
@@ -187,45 +195,61 @@ namespace CourseProjectDB
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int taskId = default;
             int weight;
             int distance;
             DateTime departure;
             DateTime arrival;
 
-            if (textBox41.Text != "" && textBox42.Text != "")
+
+            if (this.currentTasksTable.Rows.Count == 1)
             {
-                weight = Int32.Parse(textBox41.Text);
-                distance = Int32.Parse(textBox42.Text);
+                DataRow currentTasksTableRow = this.currentTasksTable.Rows[0];
+                taskId = (int)currentTasksTableRow["id"];
 
-                departure = dateTimePicker1.Value;
-                arrival = dateTimePicker1.Value;
+                if (textBox41.Text != "" && textBox42.Text != "")
+                {
+                    DataRow userRow = dataTable.Rows[0];
+                    int userId = (int)userRow["id"];
 
-                DataTable dt = new DataTable();
-                SqlConnection myConn = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=True;User ID=root;Password=root;");
-                myConn.Open();
-                SqlCommand myCmd = new SqlCommand("ADD_REPORT", myConn);
-                myCmd.CommandType = CommandType.StoredProcedure;
-                SqlParameter param1 = new SqlParameter("@current_task_id", 3);
-                SqlParameter param2 = new SqlParameter("@current_user_id", 2);
-                SqlParameter param3 = new SqlParameter("@departure", departure);
-                SqlParameter param4 = new SqlParameter("@weight", weight);
-                SqlParameter param5 = new SqlParameter("@distance", distance);
-                SqlParameter param6 = new SqlParameter("@arrival", arrival);
-                myCmd.Parameters.Add(param1);
-                myCmd.Parameters.Add(param2);
-                myCmd.Parameters.Add(param3);
-                myCmd.Parameters.Add(param4);
-                myCmd.Parameters.Add(param5);
-                myCmd.Parameters.Add(param6);
-                SqlDataAdapter da = new SqlDataAdapter(myCmd);
-                da.Fill(dt);
-                dataGridView2.DataSource = dt;
+                    weight = Int32.Parse(textBox41.Text);
+                    distance = Int32.Parse(textBox42.Text);
 
-                MessageBox.Show("Отчет был успешно добавлен.");
+                    departure = dateTimePicker1.Value;
+                    arrival = dateTimePicker1.Value;
+
+                    DataTable dt = new DataTable();
+                    SqlConnection myConn = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=True;User ID=root;Password=root;");
+                    myConn.Open();
+                    SqlCommand myCmd = new SqlCommand("ADD_REPORT", myConn);
+                    myCmd.CommandType = CommandType.StoredProcedure;
+                    SqlParameter param1 = new SqlParameter("@current_task_id", taskId);
+                    SqlParameter param2 = new SqlParameter("@current_user_id", userId);
+                    SqlParameter param3 = new SqlParameter("@departure", departure);
+                    SqlParameter param4 = new SqlParameter("@weight", weight);
+                    SqlParameter param5 = new SqlParameter("@distance", distance);
+                    SqlParameter param6 = new SqlParameter("@arrival", arrival);
+                    myCmd.Parameters.Add(param1);
+                    myCmd.Parameters.Add(param2);
+                    myCmd.Parameters.Add(param3);
+                    myCmd.Parameters.Add(param4);
+                    myCmd.Parameters.Add(param5);
+                    myCmd.Parameters.Add(param6);
+                    SqlDataAdapter da = new SqlDataAdapter(myCmd);
+                    da.Fill(dt);
+                    dataGridView2.DataSource = dt;
+
+                    MessageBox.Show("Отчет был успешно добавлен.");
+                }
+                else
+                {
+                    MessageBox.Show("Заполните все поля!");
+                }
             } else
             {
-                MessageBox.Show("Заполните все поля!");
+                MessageBox.Show("У пользователя нету активных задач!");
             }
+
         }
     }
 }
