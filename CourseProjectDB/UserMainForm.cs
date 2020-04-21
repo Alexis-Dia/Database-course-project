@@ -184,5 +184,29 @@ namespace CourseProjectDB
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection myConn = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=True;User ID=root;Password=root;");
+            myConn.Open();
+            SqlCommand myCmd = new SqlCommand("ADD_REPORT", myConn);
+            myCmd.CommandType = CommandType.StoredProcedure;
+            SqlParameter param1 = new SqlParameter("@current_task_id", 3);
+            SqlParameter param2 = new SqlParameter("@current_user_id", 2);
+            SqlParameter param3 = new SqlParameter("@departure", "1/15/2020 7:00 AM");
+            SqlParameter param4 = new SqlParameter("@weight", 77);
+            SqlParameter param5 = new SqlParameter("@distance", 77);
+            SqlParameter param6 = new SqlParameter("@arrival", "1/15/2020 7:00 AM");
+            myCmd.Parameters.Add(param1);
+            myCmd.Parameters.Add(param2);
+            myCmd.Parameters.Add(param3);
+            myCmd.Parameters.Add(param4);
+            myCmd.Parameters.Add(param5);
+            myCmd.Parameters.Add(param6);
+            SqlDataAdapter da = new SqlDataAdapter(myCmd);
+            da.Fill(dt);
+            dataGridView2.DataSource = dt;
+        }
     }
 }

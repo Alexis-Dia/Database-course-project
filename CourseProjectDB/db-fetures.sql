@@ -92,3 +92,23 @@ SELECT * FROM report WHERE id IN
 DROP FUNCTION GetReportsForActiveTask
 GO
 SELECT * FROM dbo.GetReportsForActiveTask(2)
+
+GO
+CREATE PROCEDURE ADD_REPORT
+(@current_task_id int OUTPUT, @current_user_id int OUTPUT, @departure DATETIME OUTPUT,  @weight int OUTPUT,  @distance int OUTPUT, @arrival DATETIME OUTPUT)
+AS
+BEGIN
+DECLARE @current_report_id int;
+SET @current_report_id = (SELECT IDENT_CURRENT('report') + 1);
+SET IDENTITY_INSERT report ON;
+INSERT INTO [dbo].[report] ([id],[departure],[weight],[distance], [arrival])
+     VALUES (@current_report_id, @departure, @weight, @distance, @arrival);
+INSERT INTO [dbo].[task_report] ([task_id],[reports_id])
+VALUES (@current_task_id, @current_report_id);
+SET IDENTITY_INSERT report OFF ;
+SELECT * FROM dbo.GetReportsForActiveTask(@current_user_id)
+END
+GO
+DROP PROCEDURE ADD_REPORT
+GO
+EXECUTE ADD_REPORT @current_task_id=3, @current_user_id=2, @departure='1/15/2020 7:00 AM', @weight=3, @distance=99, @arrival='1/15/2020 7:00 AM'
