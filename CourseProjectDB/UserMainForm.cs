@@ -17,6 +17,7 @@ namespace CourseProjectDB
         Main main = null;
         DataTable dataTable = null;
         DataTable currentTasksTable = null;
+        DataTable freeTasksDataTable = null;
         bool userIsActive = false;
 
         public UserMainForm(Main main, DataTable dataTable)
@@ -93,9 +94,10 @@ namespace CourseProjectDB
             //Example for getting tasks using users functions:
             Connection connection = new Connection();
             SqlDataAdapter sqlDataAdapter = connection.getConnection("SELECT * from GetFreeTasks()");
-            DataTable dataTable = new DataTable();
-            sqlDataAdapter.Fill(dataTable);
-            dataGridView1.DataSource = dataTable;
+            DataTable freeTasksDataTable = new DataTable();
+            sqlDataAdapter.Fill(freeTasksDataTable);
+            dataGridView1.DataSource = freeTasksDataTable;
+            this.freeTasksDataTable = freeTasksDataTable;
 
             panel1.SendToBack();
             panel2.BringToFront();
@@ -157,6 +159,12 @@ namespace CourseProjectDB
             sqlDataAdapter.Fill(dataTable);
             dataGridView2.DataSource = dataTable;
 
+            Connection connection2 = new Connection();
+            SqlDataAdapter sqlDataAdapter2 = connection2.getConnection("SELECT * from GetMineCurrentTasks(" + userId + ")");
+            DataTable currentTasksTable = new DataTable();
+            sqlDataAdapter2.Fill(currentTasksTable);
+            this.currentTasksTable = currentTasksTable;
+
             panel1.SendToBack();
             panel2.SendToBack();
             panel3.BringToFront();
@@ -215,7 +223,6 @@ namespace CourseProjectDB
             DateTime departure;
             DateTime arrival;
 
-
             if (this.currentTasksTable.Rows.Count == 1)
             {
                 DataRow currentTasksTableRow = this.currentTasksTable.Rows[0];
@@ -271,9 +278,29 @@ namespace CourseProjectDB
         private void button2_Click(object sender, EventArgs e)
         {
             int rowIndex = dataGridView1.CurrentCell.RowIndex;
-            if (rowIndex != 0)
+            int numberOfSelectedRows = dataGridView1.SelectedRows.Count;
+            if (numberOfSelectedRows == 1)
             {
+                DataRow freeTaskRow = this.freeTasksDataTable.Rows[0];
+                int taskId = (int)freeTaskRow["id"];
 
+                DataRow userRow = dataTable.Rows[0];
+                int userId = (int)userRow["id"];
+
+                DataTable dt = new DataTable();
+                SqlConnection myConn = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=True;User ID=root;Password=root;");
+                myConn.Open();
+                SqlCommand myCmd = new SqlCommand("TAKE_TASK", myConn);
+                myCmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter param1 = new SqlParameter("@chosen_task_id", taskId);
+                SqlParameter param2 = new SqlParameter("@current_user_id", userId);
+                myCmd.Parameters.Add(param1);
+                myCmd.Parameters.Add(param2);
+                SqlDataAdapter da = new SqlDataAdapter(myCmd);
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+                MessageBox.Show("Задача успешно выбрана для выполнения!");
+                button2.Enabled = false;
             } else
             {
                 MessageBox.Show("Выберите задачу!");

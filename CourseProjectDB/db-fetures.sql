@@ -106,9 +106,42 @@ INSERT INTO [dbo].[report] ([id],[departure],[weight],[distance], [arrival])
 INSERT INTO [dbo].[task_report] ([task_id],[reports_id])
 VALUES (@current_task_id, @current_report_id);
 SET IDENTITY_INSERT report OFF ;
-SELECT * FROM dbo.GetReportsForActiveTask(@current_user_id)
+SELECT * FROM dbo.GetReportsForActiveTask(@current_user_id)  ORDER BY id
 END
 GO
 DROP PROCEDURE ADD_REPORT
 GO
 EXECUTE ADD_REPORT @current_task_id=3, @current_user_id=2, @departure='1/15/2020 7:00 AM', @weight=3, @distance=99, @arrival='1/15/2020 7:00 AM'
+
+GO
+CREATE PROCEDURE TAKE_TASK
+(@chosen_task_id int OUTPUT, @current_user_id int OUTPUT)
+AS
+BEGIN
+DECLARE @random_free_car_id int;
+SET @random_free_car_id = (SELECT TOP 1 id FROM car WHERE status_id = 1);
+UPDATE task SET status_id = 2, car_id = @random_free_car_id, driver_id = @current_user_id WHERE id = @chosen_task_id;
+UPDATE [carriages_system].[dbo].[user] SET status_id = 2;
+SELECT * FROM dbo.GetFreeTasks() ORDER BY id;
+END
+GO
+DROP PROCEDURE TAKE_TASK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
