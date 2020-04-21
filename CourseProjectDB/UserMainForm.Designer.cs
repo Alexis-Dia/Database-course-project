@@ -57,8 +57,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox42 = new System.Windows.Forms.TextBox();
+            this.textBox41 = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
@@ -325,8 +325,8 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.textBox42);
+            this.panel3.Controls.Add(this.textBox41);
             this.panel3.Controls.Add(this.label44);
             this.panel3.Controls.Add(this.label43);
             this.panel3.Controls.Add(this.label42);
@@ -340,19 +340,19 @@
             this.panel3.Size = new System.Drawing.Size(962, 392);
             this.panel3.TabIndex = 14;
             // 
-            // textBox2
+            // textBox42
             // 
-            this.textBox2.Location = new System.Drawing.Point(724, 129);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 9;
+            this.textBox42.Location = new System.Drawing.Point(724, 129);
+            this.textBox42.Name = "textBox42";
+            this.textBox42.Size = new System.Drawing.Size(100, 20);
+            this.textBox42.TabIndex = 9;
             // 
-            // textBox1
+            // textBox41
             // 
-            this.textBox1.Location = new System.Drawing.Point(724, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 8;
+            this.textBox41.Location = new System.Drawing.Point(724, 85);
+            this.textBox41.Name = "textBox41";
+            this.textBox41.Size = new System.Drawing.Size(100, 20);
+            this.textBox41.TabIndex = 8;
             // 
             // label44
             // 
@@ -480,7 +480,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox42;
+        private System.Windows.Forms.TextBox textBox41;
     }
 }
