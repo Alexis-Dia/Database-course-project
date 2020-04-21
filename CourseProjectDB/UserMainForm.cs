@@ -179,5 +179,10 @@ namespace CourseProjectDB
             panel2.Visible = true;
             panel3.Visible = false;
         }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
