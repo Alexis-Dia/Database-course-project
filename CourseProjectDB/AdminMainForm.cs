@@ -373,5 +373,31 @@ namespace CourseProjectDB
             panel10.SendToBack();
             panel11.SendToBack();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int rowIndex = dataGridView5.CurrentCell.RowIndex;
+            if (rowIndex != 0)
+            {
+                MessageBox.Show("Задача была успешно отвалидирована.");
+            }
+            else
+            {
+                MessageBox.Show("Выберите задачу!");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int rowIndex = dataGridView5.CurrentCell.RowIndex;
+            if (rowIndex != 0)
+            {
+                MessageBox.Show("Задача успешно отклонена.");
+            }
+            else
+            {
+                MessageBox.Show("Выберите задачу!");
+            }
+        }
     }
 }
