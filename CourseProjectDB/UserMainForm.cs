@@ -17,6 +17,7 @@ namespace CourseProjectDB
         Main main = null;
         DataTable dataTable = null;
         DataTable currentTasksTable = null;
+        bool userIsActive = false;
 
         public UserMainForm(Main main, DataTable dataTable)
         {
@@ -42,6 +43,13 @@ namespace CourseProjectDB
             DataTable currentTasksTable = new DataTable();
             sqlDataAdapter.Fill(currentTasksTable);
             this.currentTasksTable = currentTasksTable;
+
+            if (currentTasksTable.Rows.Count == 1)
+            {
+                this.userIsActive = true;
+                button2.Enabled = false;
+            }
+            
         }
 
         private void UserForm_Load(object sender, EventArgs e)
@@ -250,6 +258,18 @@ namespace CourseProjectDB
                 MessageBox.Show("У пользователя нету активных задач!");
             }
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int rowIndex = dataGridView1.CurrentCell.RowIndex;
+            if (rowIndex != 0)
+            {
+
+            } else
+            {
+                MessageBox.Show("Выберите задачу!");
+            }
         }
     }
 }
