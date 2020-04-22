@@ -15,7 +15,7 @@ namespace CourseProjectDB
     {
 
         Main main = null;
-        DataTable dataTable = null;
+        DataTable currentUserDataTable = null;
         DataTable currentTasksTable = null;
         DataTable freeTasksDataTable = null;
         bool userIsActive = false;
@@ -24,7 +24,7 @@ namespace CourseProjectDB
         {
             InitializeComponent();
             this.main = main;
-            this.dataTable = dataTable;
+            this.currentUserDataTable = dataTable;
 
             DataRow row = dataTable.Rows[0];
             textBox11.Text = row["first_name"].ToString();
@@ -132,7 +132,7 @@ namespace CourseProjectDB
 
         private void текущаяЗадачаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DataRow row = this.dataTable.Rows[0];
+            DataRow row = this.currentUserDataTable.Rows[0];
             int userId = (int) row["id"];
             Connection connection = new Connection();
             SqlDataAdapter sqlDataAdapter = connection.getConnection("SELECT * from GetMineFinishedTasks(" + userId + ")");
@@ -151,7 +151,7 @@ namespace CourseProjectDB
 
         private void всеОтчетыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DataRow row = this.dataTable.Rows[0];
+            DataRow row = this.currentUserDataTable.Rows[0];
             int userId = (int)row["id"];
             Connection connection = new Connection();
             SqlDataAdapter sqlDataAdapter = connection.getConnection("SELECT * from GetReportsForActiveTask(" + userId + ")");
@@ -193,7 +193,7 @@ namespace CourseProjectDB
 
         private void текущаяЗадачаToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            DataRow row = this.dataTable.Rows[0];
+            DataRow row = this.currentUserDataTable.Rows[0];
             int userId = (int)row["id"];
             Connection connection = new Connection();
             SqlDataAdapter sqlDataAdapter = connection.getConnection("SELECT * from GetMineCurrentTasks(" + userId + ")");
@@ -230,7 +230,7 @@ namespace CourseProjectDB
 
                 if (textBox41.Text != "" && textBox42.Text != "")
                 {
-                    DataRow userRow = dataTable.Rows[0];
+                    DataRow userRow = currentUserDataTable.Rows[0];
                     int userId = (int)userRow["id"];
 
                     weight = Int32.Parse(textBox41.Text);
@@ -284,7 +284,7 @@ namespace CourseProjectDB
                 DataRow freeTaskRow = this.freeTasksDataTable.Rows[0];
                 int taskId = (int)freeTaskRow["id"];
 
-                DataRow userRow = dataTable.Rows[0];
+                DataRow userRow = this.currentUserDataTable.Rows[0];
                 int userId = (int)userRow["id"];
 
                 DataTable dt = new DataTable();
@@ -299,6 +299,14 @@ namespace CourseProjectDB
                 SqlDataAdapter da = new SqlDataAdapter(myCmd);
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
+
+                Connection connection = new Connection();
+                String query = "select * from [carriages_system].[dbo].[user] where id = " + userId;
+                SqlDataAdapter sqlDataAdapter = connection.getConnection(query);
+                DataTable currentUserDataTable = new DataTable();
+                sqlDataAdapter.Fill(currentUserDataTable);
+                this.currentUserDataTable = currentUserDataTable;
+
                 MessageBox.Show("Задача успешно выбрана для выполнения!");
                 button2.Enabled = false;
             } else

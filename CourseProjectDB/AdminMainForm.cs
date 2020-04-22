@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -379,7 +380,42 @@ namespace CourseProjectDB
             int rowIndex = dataGridView5.CurrentCell.RowIndex;
             if (rowIndex != 0)
             {
-                MessageBox.Show("Задача была успешно отвалидирована.");
+                int selectedrowindex = dataGridView5.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dataGridView5.Rows[selectedrowindex];
+                int taskId = (int)selectedRow.Cells[0].Value;
+                int taskStatus = (int)selectedRow.Cells[5].Value;
+
+                if (taskStatus == 3)
+                {
+                    DataTable dt = new DataTable();
+                    SqlConnection myConn = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=True;User ID=root;Password=root;");
+                    myConn.Open();
+                    SqlCommand myCmd = new SqlCommand("VALIDATE_TASK_TO_FINISHED", myConn);
+                    myCmd.CommandType = CommandType.StoredProcedure;
+                    SqlParameter param1 = new SqlParameter("@chosen_task_id", taskId);
+                    myCmd.Parameters.Add(param1);
+                    SqlDataAdapter da = new SqlDataAdapter(myCmd);
+                    da.Fill(dt);
+                    dataGridView5.DataSource = dt;
+
+                    this.userTableAdapter.Fill(this.carriages_systemDataSet.user);
+                    try
+                    {
+                        this.Validate();
+                        this.fullUserViewBindingSource.EndEdit();
+                        this.tableAdapterManager.UpdateAll(this.carriages_systemDataSet);
+                    }
+                    catch (System.Data.SqlClient.SqlException ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+                    MessageBox.Show("Задача была успешно отвалидирована.");
+                }
+                else
+                {
+                    MessageBox.Show("Выберите задычу, со статусом 'VALIDATING'!");
+                }
             }
             else
             {
@@ -389,10 +425,31 @@ namespace CourseProjectDB
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int rowIndex = dataGridView5.CurrentCell.RowIndex;
-            if (rowIndex != 0)
+            int numberOfSelectedRows = dataGridView5.SelectedRows.Count;
+            if (numberOfSelectedRows == 1)
             {
-                MessageBox.Show("Задача успешно отклонена.");
+                int selectedrowindex = dataGridView5.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dataGridView5.Rows[selectedrowindex];
+                int taskId = (int) selectedRow.Cells[0].Value;
+                int taskStatus = (int) selectedRow.Cells[5].Value;
+
+                if (taskStatus == 3)
+                {
+                    DataTable dt = new DataTable();
+                    SqlConnection myConn = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=True;User ID=root;Password=root;");
+                    myConn.Open();
+                    SqlCommand myCmd = new SqlCommand("VALIDATE_TASK_TO_REJECTED", myConn);
+                    myCmd.CommandType = CommandType.StoredProcedure;
+                    SqlParameter param1 = new SqlParameter("@chosen_task_id", taskId);
+                    myCmd.Parameters.Add(param1);
+                    SqlDataAdapter da = new SqlDataAdapter(myCmd);
+                    da.Fill(dt);
+                    dataGridView5.DataSource = dt;
+                    MessageBox.Show("Задача успешно отклонена.");
+                } else
+                {
+                    MessageBox.Show("Выберите задычу, со статусом 'VALIDATING'!");
+                }
             }
             else
             {
