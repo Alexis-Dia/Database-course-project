@@ -309,7 +309,27 @@ namespace CourseProjectDB
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Задача отправлена на валидацию администратором!");
+            if (this.currentTasksTable.Rows.Count == 1)
+            {
+                DataRow currentTasksTableRow = this.currentTasksTable.Rows[0];
+                int taskId = (int)currentTasksTableRow["id"];
+                DataTable dt = new DataTable();
+                SqlConnection myConn = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=True;User ID=root;Password=root;");
+                myConn.Open();
+                SqlCommand myCmd = new SqlCommand("SEND_TO_VALIDATION_TASK", myConn);
+                myCmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter param1 = new SqlParameter("@chosen_task_id", taskId);
+                myCmd.Parameters.Add(param1);
+                SqlDataAdapter da = new SqlDataAdapter(myCmd);
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+                button1.Enabled = false;
+                button3.Enabled = false;
+                MessageBox.Show("Задача отправлена на валидацию администратором!");
+            } else
+            {
+                MessageBox.Show("У вас нету активной задачи или нету ни одного отчета!");
+            }
         }
     }
 }
