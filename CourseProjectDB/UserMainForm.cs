@@ -307,6 +307,9 @@ namespace CourseProjectDB
                 sqlDataAdapter.Fill(currentUserDataTable);
                 this.currentUserDataTable = currentUserDataTable;
 
+                DataRow row = this.currentUserDataTable.Rows[0];
+                textBox17.Text = row["status_id"].ToString();
+
                 MessageBox.Show("Задача успешно выбрана для выполнения!");
                 button2.Enabled = false;
             } else
