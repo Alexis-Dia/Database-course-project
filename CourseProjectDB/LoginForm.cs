@@ -35,8 +35,8 @@ namespace CourseProjectDB
 
             Connection connection = new Connection();
             String login = textBox1.Text;
-            String query = "select * from [carriages_system].[dbo].[user] where login = @login";
-            SqlDataAdapter sqlDataAdapter = connection.getConnectionWithCommand(query, login);
+            String query = "select * from [carriages_system].[dbo].[FullUserView] where login = '" + login + "'";
+            SqlDataAdapter sqlDataAdapter = connection.getConnection(query);
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
 

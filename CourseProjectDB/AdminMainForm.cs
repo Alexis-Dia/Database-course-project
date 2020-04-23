@@ -32,7 +32,7 @@ namespace CourseProjectDB
         private void AdminMainForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'carriages_systemDataSet.FullUserView' table. You can move, or remove it, as needed.
-            this.fullUserViewTableAdapter.Fill(this.carriages_systemDataSet.FullUserView);
+            //this.fullUserViewTableAdapter.Fill(this.carriages_systemDataSet.FullUserView);
             // TODO: This line of code loads data into the 'carriages_systemDataSet.user_status' table. You can move, or remove it, as needed.
             this.user_statusTableAdapter.Fill(this.carriages_systemDataSet.user_status);
             // TODO: This line of code loads data into the 'carriages_systemDataSet.user' table. You can move, or remove it, as needed.

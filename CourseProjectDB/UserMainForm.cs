@@ -33,7 +33,7 @@ namespace CourseProjectDB
             textBox14.Text = row["birthday"].ToString();
             textBox15.Text = row["login"].ToString();
             textBox16.Text = row["money"].ToString();
-            textBox17.Text = row["status_id"].ToString();
+            textBox17.Text = row["name"].ToString();
 
             panel1.BringToFront();
             panel2.SendToBack();
@@ -301,14 +301,14 @@ namespace CourseProjectDB
                 dataGridView1.DataSource = dt;
 
                 Connection connection = new Connection();
-                String query = "select * from [carriages_system].[dbo].[user] where id = " + userId;
+                String query = "select * from [carriages_system].[dbo].[FullUserView] where id = " + userId;
                 SqlDataAdapter sqlDataAdapter = connection.getConnection(query);
                 DataTable currentUserDataTable = new DataTable();
                 sqlDataAdapter.Fill(currentUserDataTable);
                 this.currentUserDataTable = currentUserDataTable;
 
                 DataRow row = this.currentUserDataTable.Rows[0];
-                textBox17.Text = row["status_id"].ToString();
+                textBox17.Text = row["name"].ToString();
 
                 MessageBox.Show("Задача успешно выбрана для выполнения!");
                 button2.Enabled = false;
