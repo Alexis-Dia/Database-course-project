@@ -22,7 +22,7 @@ CREATE TABLE [carriages_system].[dbo].[audit_report_data](
 --1. Создать представление, содержащее полную информацию о водителе. 
 GO
 CREATE VIEW FullUserView([id], [last_name], [patronymic], [birthday], [login], [password], [money], [role_id], [status_id], [name]) AS
-SELECT u.id, u.id, u.id, u.id, u.id, u.id, u.id, u.id, u.id, s.name FROM 
+SELECT u.id, u.first_name, u.last_name, u.birthday, u.login, u.password, u.money, u.role_id, u.status_id, s.name FROM 
 [carriages_system].[dbo].[user] AS u
 left join
 user_status AS s
@@ -30,6 +30,7 @@ ON u.status_id = s.id
 
 --SELECT * FROM FullUserView;
 --DROP VIEW FullUserView
+
 
 --2. Создать представление, содержащее информацию о среднем километраже выездов
 --каждого водителя за два года. С помощью созданного представления определить фамилии
