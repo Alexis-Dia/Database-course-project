@@ -127,6 +127,7 @@ namespace CourseProjectDB
             DataTable freeTasksDataTable = new DataTable();
             sqlDataAdapter.Fill(freeTasksDataTable);
             dataGridView1.DataSource = freeTasksDataTable;
+            dataGridView1.Columns[0].Visible = false;
             this.freeTasksDataTable = freeTasksDataTable;
 
             panel1.SendToBack();
@@ -167,6 +168,7 @@ namespace CourseProjectDB
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
+            dataGridView1.Columns[0].Visible = false;
 
             panel1.SendToBack();
             panel2.BringToFront();
@@ -185,6 +187,7 @@ namespace CourseProjectDB
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
             dataGridView2.DataSource = dataTable;
+            dataGridView2.Columns[0].Visible = false;
 
             SqlDataAdapter sqlDataAdapter2 = this.connection.getConnection("SELECT * from GetMineCurrentTasks(" + userId + ")");
             DataTable currentTasksTable = new DataTable();
@@ -225,6 +228,7 @@ namespace CourseProjectDB
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
+            dataGridView1.Columns[0].Visible = false;
 
             panel1.SendToBack();
             panel2.BringToFront();
