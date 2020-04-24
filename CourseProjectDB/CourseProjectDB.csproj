@@ -52,9 +52,7 @@
       <DependentUpon>carriages_systemDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Connection.cs" />
-    <Compile Include="AdminMainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="AdminMainForm.cs" />
     <Compile Include="AdminMainForm.Designer.cs">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </Compile>
@@ -64,9 +62,7 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserMainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="UserMainForm.cs" />
     <Compile Include="UserMainForm.Designer.cs">
       <DependentUpon>UserMainForm.cs</DependentUpon>
     </Compile>
