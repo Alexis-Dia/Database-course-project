@@ -13,7 +13,7 @@ namespace CourseProjectDB
 {
     public partial class UserMainForm : Form
     {
-        //Connection connection = new Connection();
+        Connection connection = new Connection();
         Main main = null;
         DataTable currentUserDataTable = null;
         DataTable currentTasksTable = null;
@@ -39,13 +39,12 @@ namespace CourseProjectDB
             panel2.SendToBack();
 
             int userId = (int)row["id"];
-            Connection connection = new Connection();
-            SqlDataAdapter sqlDataAdapter = connection.getConnection("SELECT * from GetMineCurrentTasks(" + userId + ")");
+            SqlDataAdapter sqlDataAdapter = this.connection.getConnection("SELECT * from GetMineCurrentTasks(" + userId + ")");
             DataTable currentTasksTable = new DataTable();
             sqlDataAdapter.Fill(currentTasksTable);
             this.currentTasksTable = currentTasksTable;
 
-            sqlDataAdapter = connection.getConnection("SELECT * FROM cariages_min_max_distance_view ORDER BY distance DESC;");
+            sqlDataAdapter = this.connection.getConnection("SELECT * FROM cariages_min_max_distance_view ORDER BY distance DESC;");
             DataTable maxDistanceTable = new DataTable();
             sqlDataAdapter.Fill(maxDistanceTable);
             dataGridView3.Columns.Add("newColumnName", "Водитель");
@@ -61,7 +60,7 @@ namespace CourseProjectDB
                 dataGridView3.Rows[i].Cells[1].Value = maxDistanceTable.Rows[i]["distance"].ToString();
             }
 
-            sqlDataAdapter = connection.getConnection("SELECT * FROM cariages_car_count_view;");
+            sqlDataAdapter = this.connection.getConnection("SELECT * FROM cariages_car_count_view;");
             DataTable maxDeparturesTable = new DataTable();
             sqlDataAdapter.Fill(maxDeparturesTable);
             dataGridView4.Columns.Add("newColumnName", "Авто");
@@ -124,8 +123,7 @@ namespace CourseProjectDB
             dataGridView1.DataSource = dt;*/
 
             //Example for getting tasks using users functions:
-            Connection connection = new Connection();
-            SqlDataAdapter sqlDataAdapter = connection.getConnection("SELECT * from GetFreeTasks()");
+            SqlDataAdapter sqlDataAdapter = this.connection.getConnection("SELECT * from GetFreeTasks()");
             DataTable freeTasksDataTable = new DataTable();
             sqlDataAdapter.Fill(freeTasksDataTable);
             dataGridView1.DataSource = freeTasksDataTable;
@@ -142,8 +140,7 @@ namespace CourseProjectDB
 
         private void мояИнформацияToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Connection connection = new Connection();
-            SqlDataAdapter sqlDataAdapter = connection.getConnection("Select * from car");
+            SqlDataAdapter sqlDataAdapter = this.connection.getConnection("Select * from car");
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
 
@@ -166,8 +163,7 @@ namespace CourseProjectDB
         {
             DataRow row = this.currentUserDataTable.Rows[0];
             int userId = (int) row["id"];
-            Connection connection = new Connection();
-            SqlDataAdapter sqlDataAdapter = connection.getConnection("SELECT * from GetMineFinishedTasks(" + userId + ")");
+            SqlDataAdapter sqlDataAdapter = this.connection.getConnection("SELECT * from GetMineFinishedTasks(" + userId + ")");
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
@@ -185,14 +181,12 @@ namespace CourseProjectDB
         {
             DataRow row = this.currentUserDataTable.Rows[0];
             int userId = (int)row["id"];
-            Connection connection = new Connection();
-            SqlDataAdapter sqlDataAdapter = connection.getConnection("SELECT * from GetReportsForActiveTask(" + userId + ")");
+            SqlDataAdapter sqlDataAdapter = this.connection.getConnection("SELECT * from GetReportsForActiveTask(" + userId + ")");
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
             dataGridView2.DataSource = dataTable;
 
-            Connection connection2 = new Connection();
-            SqlDataAdapter sqlDataAdapter2 = connection2.getConnection("SELECT * from GetMineCurrentTasks(" + userId + ")");
+            SqlDataAdapter sqlDataAdapter2 = this.connection.getConnection("SELECT * from GetMineCurrentTasks(" + userId + ")");
             DataTable currentTasksTable = new DataTable();
             sqlDataAdapter2.Fill(currentTasksTable);
             this.currentTasksTable = currentTasksTable;
@@ -227,8 +221,7 @@ namespace CourseProjectDB
         {
             DataRow row = this.currentUserDataTable.Rows[0];
             int userId = (int)row["id"];
-            Connection connection = new Connection();
-            SqlDataAdapter sqlDataAdapter = connection.getConnection("SELECT * from GetMineCurrentTasks(" + userId + ")");
+            SqlDataAdapter sqlDataAdapter = this.connection.getConnection("SELECT * from GetMineCurrentTasks(" + userId + ")");
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
@@ -332,9 +325,8 @@ namespace CourseProjectDB
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
 
-                Connection connection = new Connection();
                 String query = "select * from [carriages_system].[dbo].[FullUserView] where id = " + userId;
-                SqlDataAdapter sqlDataAdapter = connection.getConnection(query);
+                SqlDataAdapter sqlDataAdapter = this.connection.getConnection(query);
                 DataTable currentUserDataTable = new DataTable();
                 sqlDataAdapter.Fill(currentUserDataTable);
                 this.currentUserDataTable = currentUserDataTable;
