@@ -13,7 +13,7 @@ namespace CourseProjectDB
 {
     public partial class UserMainForm : Form
     {
-
+        //Connection connection = new Connection();
         Main main = null;
         DataTable currentUserDataTable = null;
         DataTable currentTasksTable = null;
@@ -44,6 +44,38 @@ namespace CourseProjectDB
             DataTable currentTasksTable = new DataTable();
             sqlDataAdapter.Fill(currentTasksTable);
             this.currentTasksTable = currentTasksTable;
+
+            sqlDataAdapter = connection.getConnection("SELECT * FROM cariages_min_max_distance_view ORDER BY distance DESC;");
+            DataTable maxDistanceTable = new DataTable();
+            sqlDataAdapter.Fill(maxDistanceTable);
+            dataGridView3.Columns.Add("newColumnName", "Водитель");
+            dataGridView3.Columns.Add("newColumnName", "Дистанция");
+            DataGridViewColumn column1 = dataGridView3.Columns[0];
+            DataGridViewColumn column2 = dataGridView3.Columns[1];
+            column1.Width = 130;
+            column2.Width = 135;
+            for (int i = 0; i < maxDistanceTable.Rows.Count; i++)
+            {
+                dataGridView3.Rows.Add();
+                dataGridView3.Rows[i].Cells[0].Value = maxDistanceTable.Rows[i]["driverId"].ToString();
+                dataGridView3.Rows[i].Cells[1].Value = maxDistanceTable.Rows[i]["distance"].ToString();
+            }
+
+            sqlDataAdapter = connection.getConnection("SELECT * FROM cariages_car_count_view;");
+            DataTable maxDeparturesTable = new DataTable();
+            sqlDataAdapter.Fill(maxDeparturesTable);
+            dataGridView4.Columns.Add("newColumnName", "Авто");
+            dataGridView4.Columns.Add("newColumnName", "Количество выездов");
+            DataGridViewColumn column3 = dataGridView4.Columns[0];
+            DataGridViewColumn column4 = dataGridView4.Columns[1];
+            column3.Width = 148;
+            column4.Width = 150;
+            for (int i = 0; i < maxDeparturesTable.Rows.Count; i++)
+            {
+                dataGridView4.Rows.Add();
+                dataGridView4.Rows[i].Cells[0].Value = maxDeparturesTable.Rows[i]["name"].ToString();
+                dataGridView4.Rows[i].Cells[1].Value = maxDeparturesTable.Rows[i]["departureCount"].ToString();
+            }
 
             if (currentTasksTable.Rows.Count == 1)
             {
