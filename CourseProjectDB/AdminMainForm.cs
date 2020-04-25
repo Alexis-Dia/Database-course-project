@@ -382,7 +382,7 @@ namespace CourseProjectDB
             {
                 int selectedrowindex = dataGridView5.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dataGridView5.Rows[selectedrowindex];
-                int taskId = (int)selectedRow.Cells[0].Value;
+                int taskId = (int)selectedRow.Cells[1].Value;
                 int taskStatus = (int)selectedRow.Cells[5].Value;
 
                 if (taskStatus == 3)
@@ -430,7 +430,7 @@ namespace CourseProjectDB
             {
                 int selectedrowindex = dataGridView5.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dataGridView5.Rows[selectedrowindex];
-                int taskId = (int) selectedRow.Cells[0].Value;
+                int taskId = (int) selectedRow.Cells[1].Value;
                 int taskStatus = (int) selectedRow.Cells[5].Value;
 
                 if (taskStatus == 3)
