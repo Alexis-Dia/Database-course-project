@@ -76,6 +76,12 @@
     <Compile Include="AdminMainForm.Designer.cs">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FreeDriverReferenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FreeDriverReferenceForm.Designer.cs">
+      <DependentUpon>FreeDriverReferenceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrintReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     <EmbeddedResource Include="AdminMainForm.resx">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FreeDriverReferenceForm.resx">
+      <DependentUpon>FreeDriverReferenceForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PrintReportForm.resx">
       <DependentUpon>PrintReportForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +144,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="UserMainForm.resx">
       <DependentUpon>UserMainForm.cs</DependentUpon>
     </EmbeddedResource>

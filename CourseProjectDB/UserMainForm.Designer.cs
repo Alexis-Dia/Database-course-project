@@ -38,6 +38,7 @@
             this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.всеОтчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -159,6 +160,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.dataGridView4);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -182,10 +184,20 @@
             this.panel1.Size = new System.Drawing.Size(874, 392);
             this.panel1.TabIndex = 1;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(749, 36);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 18;
+            this.button4.Text = "Справка занятости";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // dataGridView4
             // 
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(482, 237);
+            this.dataGridView4.Location = new System.Drawing.Point(373, 237);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.Size = new System.Drawing.Size(342, 150);
             this.dataGridView4.TabIndex = 17;
@@ -193,7 +205,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(481, 216);
+            this.label2.Location = new System.Drawing.Point(372, 216);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(186, 13);
             this.label2.TabIndex = 16;
@@ -202,7 +214,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(479, 14);
+            this.label1.Location = new System.Drawing.Point(370, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(217, 13);
             this.label1.TabIndex = 15;
@@ -211,7 +223,7 @@
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(482, 35);
+            this.dataGridView3.Location = new System.Drawing.Point(373, 35);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(309, 150);
             this.dataGridView3.TabIndex = 14;
@@ -479,10 +491,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1037, 450);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "UserMainForm";
             this.Text = "Окно пользователя";
@@ -548,5 +560,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button4;
     }
 }

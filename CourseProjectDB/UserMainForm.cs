@@ -370,5 +370,25 @@ namespace CourseProjectDB
                 MessageBox.Show("У вас нету активной задачи или нету ни одного отчета!");
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DateTime utcDate = DateTime.UtcNow;
+
+            if (this.currentTasksTable.Rows.Count == 1)
+            {
+                DataRow currentTasksTableRow = this.currentTasksTable.Rows[0];
+                int taskId = (int)currentTasksTableRow["id"];
+
+                ReferenceForm referenceForm = new ReferenceForm(new string[]{
+            textBox11.Text, textBox12.Text, textBox13.Text, utcDate.ToString(), textBox17.Text}, currentTasksTableRow);
+                referenceForm.Show();
+            } else
+            {
+                FreeDriverReferenceForm freeDriverReferenceForm = new FreeDriverReferenceForm(new string[]{
+            textBox11.Text, textBox12.Text, textBox13.Text, utcDate.ToString(), textBox17.Text});
+                freeDriverReferenceForm.Show();
+            }
+        }
     }
 }

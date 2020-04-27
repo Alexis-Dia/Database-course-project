@@ -1,6 +1,6 @@
 ﻿namespace CourseProjectDB
 {
-    partial class ReferenceForm
+    partial class FreeDriverReferenceForm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,22 +34,22 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "CourseProjectDB.Report4.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "CourseProjectDB.Report3.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // ReferenceForm
+            // FreeDriverReferenceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "ReferenceForm";
-            this.Text = "Справка";
-            this.Load += new System.EventHandler(this.ReferenceForm_Load);
+            this.Name = "FreeDriverReferenceForm";
+            this.Text = "FreeDriverReferenceForm";
+            this.Load += new System.EventHandler(this.FreeDriverReferenceForm_Load);
             this.ResumeLayout(false);
 
         }
