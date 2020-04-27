@@ -462,5 +462,11 @@ namespace CourseProjectDB
             PrintTaskForm printTaskForm = new PrintTaskForm();
             printTaskForm.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            PrintReportForm printReportForm = new PrintReportForm();
+            printReportForm.Show();
+        }
     }
 }
