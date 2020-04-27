@@ -24,5 +24,31 @@ namespace CourseProjectDB
 
             this.reportViewer1.RefreshReport();
         }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //this.taskTableAdapter.FillBy(this.carriages_systemDataSet.task, nAMEToolStripTextBox.Text);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.taskTableAdapter.FillBy(this.carriages_systemDataSet.task, textBox1.Text);
+                this.reportViewer1.RefreshReport();
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
