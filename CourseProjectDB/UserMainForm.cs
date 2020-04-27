@@ -269,7 +269,7 @@ namespace CourseProjectDB
                     arrival = dateTimePicker1.Value;
 
                     DataTable dt = new DataTable();
-                    SqlConnection myConn = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=True;User ID=root;Password=root;");
+                    SqlConnection myConn = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=false;User ID=root;Password=root;");
                     myConn.Open();
                     SqlCommand myCmd = new SqlCommand("ADD_REPORT", myConn);
                     myCmd.CommandType = CommandType.StoredProcedure;
@@ -317,7 +317,7 @@ namespace CourseProjectDB
                 int userId = (int)userRow["id"];
 
                 DataTable dt = new DataTable();
-                SqlConnection myConn = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=True;User ID=root;Password=root;");
+                SqlConnection myConn = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=false;User ID=root;Password=root;");
                 myConn.Open();
                 SqlCommand myCmd = new SqlCommand("TAKE_TASK", myConn);
                 myCmd.CommandType = CommandType.StoredProcedure;
@@ -353,7 +353,7 @@ namespace CourseProjectDB
                 DataRow currentTasksTableRow = this.currentTasksTable.Rows[0];
                 int taskId = (int)currentTasksTableRow["id"];
                 DataTable dt = new DataTable();
-                SqlConnection myConn = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=True;User ID=root;Password=root;");
+                SqlConnection myConn = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=false;User ID=root;Password=root;");
                 myConn.Open();
                 SqlCommand myCmd = new SqlCommand("SEND_TO_VALIDATION_TASK", myConn);
                 myCmd.CommandType = CommandType.StoredProcedure;

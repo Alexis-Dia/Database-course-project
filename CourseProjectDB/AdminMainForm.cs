@@ -388,7 +388,7 @@ namespace CourseProjectDB
                 if (taskStatus == 3)
                 {
                     DataTable dt = new DataTable();
-                    SqlConnection myConn = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=True;User ID=root;Password=root;");
+                    SqlConnection myConn = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=false;User ID=root;Password=root;");
                     myConn.Open();
                     SqlCommand myCmd = new SqlCommand("VALIDATE_TASK_TO_FINISHED", myConn);
                     myCmd.CommandType = CommandType.StoredProcedure;
@@ -436,7 +436,7 @@ namespace CourseProjectDB
                 if (taskStatus == 3)
                 {
                     DataTable dt = new DataTable();
-                    SqlConnection myConn = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=True;User ID=root;Password=root;");
+                    SqlConnection myConn = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=false;User ID=root;Password=root;");
                     myConn.Open();
                     SqlCommand myCmd = new SqlCommand("VALIDATE_TASK_TO_REJECTED", myConn);
                     myCmd.CommandType = CommandType.StoredProcedure;
