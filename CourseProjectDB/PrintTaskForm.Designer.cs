@@ -28,16 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.carriages_systemDataSet = new CourseProjectDB.carriages_systemDataSet();
+            this.taskBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.taskTableAdapter = new CourseProjectDB.carriages_systemDataSetTableAdapters.taskTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.carriages_systemDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.taskBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "CourseProjectDB.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(2, 46);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(797, 392);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // carriages_systemDataSet
+            // 
+            this.carriages_systemDataSet.DataSetName = "carriages_systemDataSet";
+            this.carriages_systemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // taskBindingSource
+            // 
+            this.taskBindingSource.DataMember = "task";
+            this.taskBindingSource.DataSource = this.carriages_systemDataSet;
+            // 
+            // taskTableAdapter
+            // 
+            this.taskTableAdapter.ClearBeforeFill = true;
             // 
             // PrintTaskForm
             // 
@@ -48,6 +73,8 @@
             this.Name = "PrintTaskForm";
             this.Text = "Страница печати отчетов";
             this.Load += new System.EventHandler(this.PrintTaskForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.carriages_systemDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -55,5 +82,8 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource taskBindingSource;
+        private carriages_systemDataSet carriages_systemDataSet;
+        private carriages_systemDataSetTableAdapters.taskTableAdapter taskTableAdapter;
     }
 }

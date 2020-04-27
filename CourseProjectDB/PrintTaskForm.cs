@@ -19,6 +19,8 @@ namespace CourseProjectDB
 
         private void PrintTaskForm_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "carriages_systemDataSet.task". При необходимости она может быть перемещена или удалена.
+            this.taskTableAdapter.Fill(this.carriages_systemDataSet.task);
 
             this.reportViewer1.RefreshReport();
         }

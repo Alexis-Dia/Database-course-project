@@ -456,5 +456,11 @@ namespace CourseProjectDB
                 MessageBox.Show("Выберите задачу!");
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            PrintTaskForm printTaskForm = new PrintTaskForm();
+            printTaskForm.Show();
+        }
     }
 }

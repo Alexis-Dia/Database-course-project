@@ -159,7 +159,15 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.summarydistanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weightDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.driveridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.caridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.statusidDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.rewardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.taskBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator5 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton29 = new System.Windows.Forms.ToolStripButton();
@@ -270,14 +278,7 @@
             this.toolStripSeparator30 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton70 = new System.Windows.Forms.ToolStripButton();
             this.fullUserViewTableAdapter = new CourseProjectDB.carriages_systemDataSetTableAdapters.FullUserViewTableAdapter();
-            this.summarydistanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weightDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.driveridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.caridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.statusidDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.rewardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.brandBindingNavigator)).BeginInit();
@@ -472,7 +473,7 @@
             this.brandBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.brandBindingNavigator.Name = "brandBindingNavigator";
             this.brandBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.brandBindingNavigator.Size = new System.Drawing.Size(278, 25);
+            this.brandBindingNavigator.Size = new System.Drawing.Size(286, 25);
             this.brandBindingNavigator.TabIndex = 9;
             this.brandBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -498,8 +499,8 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorDeleteItem
@@ -715,7 +716,7 @@
             this.bindingNavigator1.MovePreviousItem = this.toolStripButton4;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.toolStripTextBox1;
-            this.bindingNavigator1.Size = new System.Drawing.Size(278, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(286, 25);
             this.bindingNavigator1.TabIndex = 10;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -731,8 +732,8 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(35, 22);
-            this.toolStripLabel1.Text = "of {0}";
+            this.toolStripLabel1.Size = new System.Drawing.Size(43, 22);
+            this.toolStripLabel1.Text = "для {0}";
             this.toolStripLabel1.ToolTipText = "Total number of items";
             // 
             // toolStripButton2
@@ -868,7 +869,7 @@
             this.bindingNavigator2.MovePreviousItem = this.toolStripButton11;
             this.bindingNavigator2.Name = "bindingNavigator2";
             this.bindingNavigator2.PositionItem = this.toolStripTextBox2;
-            this.bindingNavigator2.Size = new System.Drawing.Size(278, 25);
+            this.bindingNavigator2.Size = new System.Drawing.Size(286, 25);
             this.bindingNavigator2.TabIndex = 10;
             this.bindingNavigator2.Text = "bindingNavigator1";
             // 
@@ -884,8 +885,8 @@
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(35, 22);
-            this.toolStripLabel2.Text = "of {0}";
+            this.toolStripLabel2.Size = new System.Drawing.Size(43, 22);
+            this.toolStripLabel2.Text = "для {0}";
             this.toolStripLabel2.ToolTipText = "Total number of items";
             // 
             // toolStripButton9
@@ -1047,7 +1048,7 @@
             this.bindingNavigator3.MovePreviousItem = this.toolStripButton18;
             this.bindingNavigator3.Name = "bindingNavigator3";
             this.bindingNavigator3.PositionItem = this.toolStripTextBox3;
-            this.bindingNavigator3.Size = new System.Drawing.Size(278, 25);
+            this.bindingNavigator3.Size = new System.Drawing.Size(286, 25);
             this.bindingNavigator3.TabIndex = 10;
             this.bindingNavigator3.Text = "bindingNavigator1";
             // 
@@ -1063,8 +1064,8 @@
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(35, 22);
-            this.toolStripLabel3.Text = "of {0}";
+            this.toolStripLabel3.Size = new System.Drawing.Size(43, 22);
+            this.toolStripLabel3.Text = "для {0}";
             this.toolStripLabel3.ToolTipText = "Total number of items";
             // 
             // toolStripButton16
@@ -1205,7 +1206,7 @@
             this.bindingNavigator7.MovePreviousItem = this.toolStripButton46;
             this.bindingNavigator7.Name = "bindingNavigator7";
             this.bindingNavigator7.PositionItem = this.toolStripTextBox7;
-            this.bindingNavigator7.Size = new System.Drawing.Size(278, 25);
+            this.bindingNavigator7.Size = new System.Drawing.Size(286, 25);
             this.bindingNavigator7.TabIndex = 10;
             this.bindingNavigator7.Text = "bindingNavigator1";
             // 
@@ -1221,8 +1222,8 @@
             // toolStripLabel7
             // 
             this.toolStripLabel7.Name = "toolStripLabel7";
-            this.toolStripLabel7.Size = new System.Drawing.Size(35, 22);
-            this.toolStripLabel7.Text = "of {0}";
+            this.toolStripLabel7.Size = new System.Drawing.Size(43, 22);
+            this.toolStripLabel7.Text = "для {0}";
             this.toolStripLabel7.ToolTipText = "Total number of items";
             // 
             // toolStripButton44
@@ -1370,7 +1371,7 @@
             this.bindingNavigator6.MovePreviousItem = this.toolStripButton39;
             this.bindingNavigator6.Name = "bindingNavigator6";
             this.bindingNavigator6.PositionItem = this.toolStripTextBox6;
-            this.bindingNavigator6.Size = new System.Drawing.Size(278, 25);
+            this.bindingNavigator6.Size = new System.Drawing.Size(286, 25);
             this.bindingNavigator6.TabIndex = 10;
             this.bindingNavigator6.Text = "bindingNavigator1";
             // 
@@ -1386,8 +1387,8 @@
             // toolStripLabel6
             // 
             this.toolStripLabel6.Name = "toolStripLabel6";
-            this.toolStripLabel6.Size = new System.Drawing.Size(35, 22);
-            this.toolStripLabel6.Text = "of {0}";
+            this.toolStripLabel6.Size = new System.Drawing.Size(43, 22);
+            this.toolStripLabel6.Text = "для {0}";
             this.toolStripLabel6.ToolTipText = "Total number of items";
             // 
             // toolStripButton37
@@ -1470,6 +1471,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.button3);
             this.panel7.Controls.Add(this.button2);
             this.panel7.Controls.Add(this.button1);
             this.panel7.Controls.Add(this.dataGridView5);
@@ -1519,10 +1521,75 @@
             this.dataGridView5.Size = new System.Drawing.Size(744, 414);
             this.dataGridView5.TabIndex = 11;
             // 
+            // summarydistanceDataGridViewTextBoxColumn
+            // 
+            this.summarydistanceDataGridViewTextBoxColumn.DataPropertyName = "summary_distance";
+            this.summarydistanceDataGridViewTextBoxColumn.HeaderText = "summary_distance";
+            this.summarydistanceDataGridViewTextBoxColumn.Name = "summarydistanceDataGridViewTextBoxColumn";
+            // 
+            // ColumnId
+            // 
+            this.ColumnId.DataPropertyName = "id";
+            this.ColumnId.HeaderText = "Column1";
+            this.ColumnId.Name = "ColumnId";
+            this.ColumnId.ReadOnly = true;
+            this.ColumnId.Visible = false;
+            // 
+            // weightDataGridViewTextBoxColumn1
+            // 
+            this.weightDataGridViewTextBoxColumn1.DataPropertyName = "weight";
+            this.weightDataGridViewTextBoxColumn1.HeaderText = "weight";
+            this.weightDataGridViewTextBoxColumn1.Name = "weightDataGridViewTextBoxColumn1";
+            // 
+            // driveridDataGridViewTextBoxColumn
+            // 
+            this.driveridDataGridViewTextBoxColumn.DataPropertyName = "driver_id";
+            this.driveridDataGridViewTextBoxColumn.DataSource = this.userBindingSource;
+            this.driveridDataGridViewTextBoxColumn.DisplayMember = "login";
+            this.driveridDataGridViewTextBoxColumn.HeaderText = "driver_id";
+            this.driveridDataGridViewTextBoxColumn.Name = "driveridDataGridViewTextBoxColumn";
+            this.driveridDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.driveridDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.driveridDataGridViewTextBoxColumn.ValueMember = "id";
+            // 
             // userBindingSource
             // 
             this.userBindingSource.DataMember = "user";
             this.userBindingSource.DataSource = this.carriages_systemDataSet;
+            // 
+            // caridDataGridViewTextBoxColumn
+            // 
+            this.caridDataGridViewTextBoxColumn.DataPropertyName = "car_id";
+            this.caridDataGridViewTextBoxColumn.DataSource = this.carBindingSource;
+            this.caridDataGridViewTextBoxColumn.DisplayMember = "number";
+            this.caridDataGridViewTextBoxColumn.HeaderText = "car_id";
+            this.caridDataGridViewTextBoxColumn.Name = "caridDataGridViewTextBoxColumn";
+            this.caridDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.caridDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.caridDataGridViewTextBoxColumn.ValueMember = "id";
+            // 
+            // statusidDataGridViewTextBoxColumn1
+            // 
+            this.statusidDataGridViewTextBoxColumn1.DataPropertyName = "status_id";
+            this.statusidDataGridViewTextBoxColumn1.DataSource = this.taskstatusBindingSource;
+            this.statusidDataGridViewTextBoxColumn1.DisplayMember = "name";
+            this.statusidDataGridViewTextBoxColumn1.HeaderText = "status_id";
+            this.statusidDataGridViewTextBoxColumn1.Name = "statusidDataGridViewTextBoxColumn1";
+            this.statusidDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.statusidDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.statusidDataGridViewTextBoxColumn1.ValueMember = "id";
+            // 
+            // rewardDataGridViewTextBoxColumn
+            // 
+            this.rewardDataGridViewTextBoxColumn.DataPropertyName = "reward";
+            this.rewardDataGridViewTextBoxColumn.HeaderText = "reward";
+            this.rewardDataGridViewTextBoxColumn.Name = "rewardDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn2
+            // 
+            this.nameDataGridViewTextBoxColumn2.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn2.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
             // 
             // taskBindingSource
             // 
@@ -1556,7 +1623,7 @@
             this.bindingNavigator5.MovePreviousItem = this.toolStripButton32;
             this.bindingNavigator5.Name = "bindingNavigator5";
             this.bindingNavigator5.PositionItem = this.toolStripTextBox5;
-            this.bindingNavigator5.Size = new System.Drawing.Size(278, 25);
+            this.bindingNavigator5.Size = new System.Drawing.Size(286, 25);
             this.bindingNavigator5.TabIndex = 10;
             this.bindingNavigator5.Text = "bindingNavigator1";
             // 
@@ -1572,8 +1639,8 @@
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(35, 22);
-            this.toolStripLabel5.Text = "of {0}";
+            this.toolStripLabel5.Size = new System.Drawing.Size(43, 22);
+            this.toolStripLabel5.Text = "для {0}";
             this.toolStripLabel5.ToolTipText = "Total number of items";
             // 
             // toolStripButton30
@@ -1721,7 +1788,7 @@
             this.bindingNavigator4.MovePreviousItem = this.toolStripButton25;
             this.bindingNavigator4.Name = "bindingNavigator4";
             this.bindingNavigator4.PositionItem = this.toolStripTextBox4;
-            this.bindingNavigator4.Size = new System.Drawing.Size(278, 25);
+            this.bindingNavigator4.Size = new System.Drawing.Size(286, 25);
             this.bindingNavigator4.TabIndex = 10;
             this.bindingNavigator4.Text = "bindingNavigator1";
             // 
@@ -1737,8 +1804,8 @@
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(35, 22);
-            this.toolStripLabel4.Text = "of {0}";
+            this.toolStripLabel4.Size = new System.Drawing.Size(43, 22);
+            this.toolStripLabel4.Text = "для {0}";
             this.toolStripLabel4.ToolTipText = "Total number of items";
             // 
             // toolStripButton23
@@ -1879,7 +1946,7 @@
             this.bindingNavigator9.MovePreviousItem = this.toolStripButton60;
             this.bindingNavigator9.Name = "bindingNavigator9";
             this.bindingNavigator9.PositionItem = this.toolStripTextBox9;
-            this.bindingNavigator9.Size = new System.Drawing.Size(278, 25);
+            this.bindingNavigator9.Size = new System.Drawing.Size(286, 25);
             this.bindingNavigator9.TabIndex = 10;
             this.bindingNavigator9.Text = "bindingNavigator1";
             // 
@@ -1895,8 +1962,8 @@
             // toolStripLabel9
             // 
             this.toolStripLabel9.Name = "toolStripLabel9";
-            this.toolStripLabel9.Size = new System.Drawing.Size(35, 22);
-            this.toolStripLabel9.Text = "of {0}";
+            this.toolStripLabel9.Size = new System.Drawing.Size(43, 22);
+            this.toolStripLabel9.Text = "для {0}";
             this.toolStripLabel9.ToolTipText = "Total number of items";
             // 
             // toolStripButton58
@@ -2098,7 +2165,7 @@
             this.bindingNavigator8.MovePreviousItem = this.toolStripButton53;
             this.bindingNavigator8.Name = "bindingNavigator8";
             this.bindingNavigator8.PositionItem = this.toolStripTextBox8;
-            this.bindingNavigator8.Size = new System.Drawing.Size(278, 25);
+            this.bindingNavigator8.Size = new System.Drawing.Size(286, 25);
             this.bindingNavigator8.TabIndex = 10;
             this.bindingNavigator8.Text = "bindingNavigator1";
             // 
@@ -2114,8 +2181,8 @@
             // toolStripLabel8
             // 
             this.toolStripLabel8.Name = "toolStripLabel8";
-            this.toolStripLabel8.Size = new System.Drawing.Size(35, 22);
-            this.toolStripLabel8.Text = "of {0}";
+            this.toolStripLabel8.Size = new System.Drawing.Size(43, 22);
+            this.toolStripLabel8.Text = "для {0}";
             this.toolStripLabel8.ToolTipText = "Total number of items";
             // 
             // toolStripButton51
@@ -2370,7 +2437,7 @@
             this.bindingNavigator10.MovePreviousItem = this.toolStripButton67;
             this.bindingNavigator10.Name = "bindingNavigator10";
             this.bindingNavigator10.PositionItem = this.toolStripTextBox10;
-            this.bindingNavigator10.Size = new System.Drawing.Size(278, 25);
+            this.bindingNavigator10.Size = new System.Drawing.Size(286, 25);
             this.bindingNavigator10.TabIndex = 12;
             this.bindingNavigator10.Text = "bindingNavigator1";
             // 
@@ -2386,8 +2453,8 @@
             // toolStripLabel10
             // 
             this.toolStripLabel10.Name = "toolStripLabel10";
-            this.toolStripLabel10.Size = new System.Drawing.Size(35, 22);
-            this.toolStripLabel10.Text = "of {0}";
+            this.toolStripLabel10.Size = new System.Drawing.Size(43, 22);
+            this.toolStripLabel10.Text = "для {0}";
             this.toolStripLabel10.ToolTipText = "Total number of items";
             // 
             // toolStripButton65
@@ -2472,70 +2539,15 @@
             // 
             this.fullUserViewTableAdapter.ClearBeforeFill = true;
             // 
-            // summarydistanceDataGridViewTextBoxColumn
+            // button3
             // 
-            this.summarydistanceDataGridViewTextBoxColumn.DataPropertyName = "summary_distance";
-            this.summarydistanceDataGridViewTextBoxColumn.HeaderText = "summary_distance";
-            this.summarydistanceDataGridViewTextBoxColumn.Name = "summarydistanceDataGridViewTextBoxColumn";
-            // 
-            // ColumnId
-            // 
-            this.ColumnId.DataPropertyName = "id";
-            this.ColumnId.HeaderText = "Column1";
-            this.ColumnId.Name = "ColumnId";
-            this.ColumnId.ReadOnly = true;
-            this.ColumnId.Visible = false;
-            // 
-            // weightDataGridViewTextBoxColumn1
-            // 
-            this.weightDataGridViewTextBoxColumn1.DataPropertyName = "weight";
-            this.weightDataGridViewTextBoxColumn1.HeaderText = "weight";
-            this.weightDataGridViewTextBoxColumn1.Name = "weightDataGridViewTextBoxColumn1";
-            // 
-            // driveridDataGridViewTextBoxColumn
-            // 
-            this.driveridDataGridViewTextBoxColumn.DataPropertyName = "driver_id";
-            this.driveridDataGridViewTextBoxColumn.DataSource = this.userBindingSource;
-            this.driveridDataGridViewTextBoxColumn.DisplayMember = "login";
-            this.driveridDataGridViewTextBoxColumn.HeaderText = "driver_id";
-            this.driveridDataGridViewTextBoxColumn.Name = "driveridDataGridViewTextBoxColumn";
-            this.driveridDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.driveridDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.driveridDataGridViewTextBoxColumn.ValueMember = "id";
-            // 
-            // caridDataGridViewTextBoxColumn
-            // 
-            this.caridDataGridViewTextBoxColumn.DataPropertyName = "car_id";
-            this.caridDataGridViewTextBoxColumn.DataSource = this.carBindingSource;
-            this.caridDataGridViewTextBoxColumn.DisplayMember = "number";
-            this.caridDataGridViewTextBoxColumn.HeaderText = "car_id";
-            this.caridDataGridViewTextBoxColumn.Name = "caridDataGridViewTextBoxColumn";
-            this.caridDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.caridDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.caridDataGridViewTextBoxColumn.ValueMember = "id";
-            // 
-            // statusidDataGridViewTextBoxColumn1
-            // 
-            this.statusidDataGridViewTextBoxColumn1.DataPropertyName = "status_id";
-            this.statusidDataGridViewTextBoxColumn1.DataSource = this.taskstatusBindingSource;
-            this.statusidDataGridViewTextBoxColumn1.DisplayMember = "name";
-            this.statusidDataGridViewTextBoxColumn1.HeaderText = "status_id";
-            this.statusidDataGridViewTextBoxColumn1.Name = "statusidDataGridViewTextBoxColumn1";
-            this.statusidDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.statusidDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.statusidDataGridViewTextBoxColumn1.ValueMember = "id";
-            // 
-            // rewardDataGridViewTextBoxColumn
-            // 
-            this.rewardDataGridViewTextBoxColumn.DataPropertyName = "reward";
-            this.rewardDataGridViewTextBoxColumn.HeaderText = "reward";
-            this.rewardDataGridViewTextBoxColumn.Name = "rewardDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn2
-            // 
-            this.nameDataGridViewTextBoxColumn2.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn2.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
+            this.button3.Location = new System.Drawing.Point(886, 127);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(129, 23);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "Печать";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // AdminMainForm
             // 
@@ -2893,5 +2905,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn statusidDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn rewardDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.Button button3;
     }
 }
