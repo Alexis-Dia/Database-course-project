@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.carriages_systemDataSet = new CourseProjectDB.carriages_systemDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportTableAdapter = new CourseProjectDB.carriages_systemDataSetTableAdapters.reportTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -42,6 +42,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.reportBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carriages_systemDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // reportBindingSource
+            // 
+            this.reportBindingSource.DataMember = "report";
+            this.reportBindingSource.DataSource = this.carriages_systemDataSet;
+            // 
+            // carriages_systemDataSet
+            // 
+            this.carriages_systemDataSet.DataSetName = "carriages_systemDataSet";
+            this.carriages_systemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -54,16 +64,6 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(432, 364);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // reportBindingSource
-            // 
-            this.reportBindingSource.DataMember = "report";
-            this.reportBindingSource.DataSource = this.carriages_systemDataSet;
-            // 
-            // carriages_systemDataSet
-            // 
-            this.carriages_systemDataSet.DataSetName = "carriages_systemDataSet";
-            this.carriages_systemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportTableAdapter
             // 
@@ -113,8 +113,7 @@
             // 
             // PrintReportForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(678, 402);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -123,7 +122,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.reportViewer1);
             this.Name = "PrintReportForm";
-            this.Text = "Form1";
+            this.Text = "Окно печати ежедневных отчетов";
             this.Load += new System.EventHandler(this.PrintReportForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.reportBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carriages_systemDataSet)).EndInit();
