@@ -49,10 +49,10 @@
             reportDataSource1.Value = this.reportBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "CourseProjectDB.Report2.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(16, 19);
+            this.reportViewer1.Location = new System.Drawing.Point(4, 19);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(391, 364);
+            this.reportViewer1.Size = new System.Drawing.Size(432, 364);
             this.reportViewer1.TabIndex = 0;
             // 
             // reportBindingSource
@@ -71,7 +71,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(453, 91);
+            this.button1.Location = new System.Drawing.Point(466, 91);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(147, 23);
             this.button1.TabIndex = 2;
@@ -81,14 +81,14 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(453, 12);
+            this.dateTimePicker1.Location = new System.Drawing.Point(466, 12);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 3;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(453, 50);
+            this.dateTimePicker2.Location = new System.Drawing.Point(466, 50);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 4;
@@ -96,7 +96,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(429, 14);
+            this.label1.Location = new System.Drawing.Point(442, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(14, 13);
             this.label1.TabIndex = 5;
@@ -105,7 +105,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(429, 52);
+            this.label2.Location = new System.Drawing.Point(442, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(21, 13);
             this.label2.TabIndex = 6;
