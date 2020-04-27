@@ -12,7 +12,7 @@
     <Shape ID="DesignTable:DATABASECHANGELOG" ZOrder="30" X="823" Y="70" Height="305" Width="284" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
     <Shape ID="DesignTable:DATABASECHANGELOGLOCK" ZOrder="29" X="1177" Y="70" Height="153" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
     <Shape ID="DesignTable:long_report" ZOrder="28" X="1547" Y="70" Height="286" Width="212" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="235" />
-    <Shape ID="DesignTable:report" ZOrder="27" X="1829" Y="70" Height="172" Width="181" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
+    <Shape ID="DesignTable:report" ZOrder="27" X="1829" Y="70" Height="191" Width="195" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
     <Shape ID="DesignTable:role" ZOrder="26" X="2080" Y="70" Height="134" Width="167" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
     <Shape ID="DesignTable:task" ZOrder="25" X="2317" Y="70" Height="229" Width="168" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
     <Shape ID="DesignTable:task_report" ZOrder="24" X="2555" Y="70" Height="115" Width="210" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
@@ -95,7 +95,7 @@
     <Connector ID="DesignRelation:FK_task_report_report" ZOrder="15" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>2010</X>
+          <X>2024</X>
           <Y>111</Y>
         </Point>
         <Point>

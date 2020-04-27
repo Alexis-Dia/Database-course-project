@@ -32,11 +32,11 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.taskBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.carriages_systemDataSet = new CourseProjectDB.carriages_systemDataSet();
             this.taskTableAdapter = new CourseProjectDB.carriages_systemDataSetTableAdapters.taskTableAdapter();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carriages_systemDataSet)).BeginInit();
             this.SuspendLayout();
@@ -62,23 +62,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Поиск имени задачи:";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(660, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Применить фильтр";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(162, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(189, 20);
-            this.textBox1.TabIndex = 7;
-            // 
             // taskBindingSource
             // 
             this.taskBindingSource.DataMember = "task";
@@ -92,6 +75,23 @@
             // taskTableAdapter
             // 
             this.taskTableAdapter.ClearBeforeFill = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(162, 13);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(189, 20);
+            this.textBox1.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(660, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(132, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Применить фильтр";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // PrintTaskForm
             // 
@@ -119,7 +119,7 @@
         private carriages_systemDataSet carriages_systemDataSet;
         private carriages_systemDataSetTableAdapters.taskTableAdapter taskTableAdapter;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
