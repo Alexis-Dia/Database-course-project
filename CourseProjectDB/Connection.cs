@@ -14,14 +14,14 @@ namespace CourseProjectDB
 
         public SqlDataAdapter getConnection(String query)
         {
-            SqlConnection connection = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=True;User ID=root;Password=root;");
+            SqlConnection connection = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=False;User ID=root;Password=root;");
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, connection);
             return sqlDataAdapter;
         }
 
         public SqlDataAdapter getConnectionWithCommand(String query, String param)
         {
-            SqlConnection connection = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=True;User ID=root;Password=root;");
+            SqlConnection connection = new SqlConnection("Data Source=ADRUZIK-PC\\SQLEXPRESS;Initial Catalog=carriages_system;Integrated Security=False;User ID=root;Password=root;");
             connection.Open();
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@login", param);
